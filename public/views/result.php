@@ -1,9 +1,10 @@
+<p>{{summoners}}</p>
 <div class="row team-100">
     <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg" alt="..." class="img-summoner">
+        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[19]}}_0.jpg" alt="..." class="img-summoner">
     </div>
     <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ahri_0.jpg" alt="..." class="img-summoner">
+        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[56]}}_0.jpg" alt="..." class="img-summoner">
     </div>
     <div class="col-md-2 col-sm-2 col-xs-2 compressed">
         <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_0.jpg" alt="..." class="img-summoner">

@@ -47,6 +47,17 @@ class ApiService
         }
     }
 
+    public function getChampNames(){
+        try {
+            return $list = $this->guzzle->get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion'
+                .'?api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json();
+        } catch (BadResponseException $e){
+            return $e->getResponse()->getBody();
+        } catch (\Exception $e){
+            return 'Invalid data passed. Please check the data.';
+        }
+    }
+    
     public function insertMaxGrades($people, $server, $serverID){
         $allGrades = [];
         $count = 0;//TODO remove after MTP This is a pause needed for dev api key (48, 58-62)

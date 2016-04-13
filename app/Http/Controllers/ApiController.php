@@ -15,6 +15,10 @@ class ApiController extends Controller
         $this->api = app('ApiService');
     }
     
+    public function getChampNames(){
+        return $this->api->getChampNames();
+    }
+    
     public function getParticipantsMaxGrades(Request $request){
         $r = $request->all();
         $server = strtolower($r['server']);

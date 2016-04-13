@@ -5933,7 +5933,9 @@ body {
 
 .container-summ {
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.45); }
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 .img-summoner {
   width: 200px;
@@ -5980,9 +5982,8 @@ body {
   font-weight: bold;
   color: #a5ccc8; }
 
-.welcome-text {
+.article-text {
   color: #a5ccc8;
-  margin-top: 50px;
   font-size: 24px;
   text-align: center; }
 
@@ -5991,5 +5992,15 @@ body {
   margin-top: 100px;
   font-size: 36px;
   text-align: center; }
+
+.header-sea {
+  color: #64a7a0; }
+
+.header-sea-dark {
+  color: #3c6964; }
+
+h1 {
+  vertical-align: middle;
+  margin-top: 0; }
 
 /*# sourceMappingURL=app.css.map */

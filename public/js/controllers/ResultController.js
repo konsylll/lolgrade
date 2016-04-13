@@ -1,6 +1,5 @@
-angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService){
-    this.sendData = function(name, server){
-        $result = ApiService.sendData(name, server);
-        console.log(result);
-    }
+angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, $state, $stateParams){
+    ChampionService.getChamps($scope);
+    $scope.summoners = $state.params.summoners;
+
 });

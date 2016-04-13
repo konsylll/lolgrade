@@ -5,7 +5,12 @@
     </head>
     <body ng-app="lolgrade">
         <div class="row centered" style="padding:10px 0 10px 0;" ng-controller = "HeaderCtrl as header">
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <h1>
+                    <b class="header-sea-dark">LOL</b><b class="header-sea">Grade</b>
+                </h1>
+            </div>
             <div class="col-md-5">
                 <div class="input-group">
                     <input type="text" class="form-control " aria-label="Text input with dropdown button" id="nickname">
@@ -29,6 +34,7 @@
             </div>
             <div class="col-md-2"></div>
         </div>
+
         <div class="container container-summ">
             <div ui-view></div>
         </div>

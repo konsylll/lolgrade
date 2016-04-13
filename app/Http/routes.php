@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('app');
 });
 
+Route::post('champs','ApiController@getChampNames');
 
-Route::get('id','ApiController@getID');
-Route::get('game','ApiController@getParticipants');
 Route::post('grades','ApiController@getParticipantsMaxGrades');
