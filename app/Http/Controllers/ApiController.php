@@ -15,7 +15,7 @@ class ApiController extends Controller
     }
     //These methods are test
     public function getID(){
-        echo($this->api->getID('aflkonsyl', 'euw'));
+        echo($this->api->getID('fdgsdfgfdsgfg', 'euw'));
     }
     public function getParticipants(){
         $id = $this->api->getID('Korean Albino', 'euw');
@@ -23,9 +23,28 @@ class ApiController extends Controller
     }
     //stop
     
-    public function getParticipantsMaxGrades(){
-        $id = $this->api->getID('BlackPolak', 'euw');
-        $participants = $this->api->getParticipants($id, 'EUW1');
-        dd($this->api->insertMaxGrades($participants, 'EUW1'));
+    public function getParticipantsMaxGrades(Request $request){
+        $r = $request->all();
+        $server = strtolower($r['server']);
+        $id = $this->api->getID($r['nickname'], $server);
+        if(!strcmp($r['server'],'EUNE')){
+            $serverID = 'EUN1';
+        } else
+        if(!strcmp($r['server'],'LAN')){
+            $serverID = 'LA1';
+        } else
+        if(!strcmp($r['server'],'OCE')){
+            $serverID = 'OC1';
+        } else
+        if(!strcmp($r['server'],'LAS')){
+            $serverID = 'LA2';
+        } else
+        if(!strcmp($r['server'],'RU') || !strcmp($r['server'],'KR')){
+            $serverID = $r['server'];
+        } else {
+            $serverID = $r['server'].'1';
+        }
+        $participants = $this->api->getParticipants($id, $server, $serverID);
+        return $this->api->insertMaxGrades($participants, $server, $serverID);
     }
 }

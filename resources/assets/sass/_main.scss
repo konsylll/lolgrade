@@ -1,9 +1,93 @@
-.srch-light {
-  background-color: #64a7a0;
-  font-weight: bold;
+//variables
+$seacolor: #64a7a0;
+$seacolor-dark: darken(#64a7a0, 20%);
+$seacolor-light: lighten(#64a7a0, 20%);
+
+//style
+body {
+  background: url('../img/wallp.jpg');
+  -webkit-background-size:cover;
+  background-size: cover;
 }
 
+.srch-light {
+  background-color: $seacolor;
+}
 .marged {
   margin: 10px 0 10px 0;
 }
+.container-summ {
+  -webkit-border-radius: 5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  //background-color: rgba(100, 167, 160, 0.75);
+  background-color: rgba(0,0,0,0.45);
+}
+
+@mixin create-image($width, $height, $border-width){
+  width: $width+px;
+  object-fit: cover;
+  border: $border-width+px solid $seacolor-dark;
+  border-radius: 8px;
+}
+
+.img-summoner {
+  @include create-image(200, 200, 2);
+}
+
+@media (min-width: 967px) and (max-width: 1280px) {
+  .img-summoner{
+    @include create-image(175,175, 2);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 966px) {
+  .img-summoner{
+    @include create-image(125,125, 2);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+  .img-summoner{
+    @include create-image(100,100, 1);
+  }
+}
+
+@media (max-width: 479px) {
+  .img-summoner{
+    @include create-image(70,70, 1);
+  }
+}
+
+.team-100 {
+  padding: 50px 0 50px 0;
+}
+
+.team-200 {
+  padding: 50px 0 50px 0;
+}
+
+.versus {
+  font-size: 36px;
+  font-weight: bold;
+  color: $seacolor-light;
+}
+
+.welcome-text{
+  color: $seacolor-light;
+  margin-top: 50px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.gl-text{
+  color: $seacolor-light;
+  margin-top: 100px;
+  font-size: 36px;
+  text-align: center;
+}
+
+
+
+
 

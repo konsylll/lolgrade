@@ -11,10 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Redirect;
+
 Route::get('/', function () {
     return view('app');
 });
 
+
 Route::get('id','ApiController@getID');
 Route::get('game','ApiController@getParticipants');
-Route::get('grades','ApiController@getParticipantsMaxGrades');
+Route::post('grades','ApiController@getParticipantsMaxGrades');
