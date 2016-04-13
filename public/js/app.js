@@ -19,7 +19,7 @@ angular.module('lolgrade', [
         url: "/overload",
         templateUrl: "views/overload.php"
     });
-}).service('ApiService', function ($http) {
+}).service('ApiService', function ($http, $state) {
    this.champions = [];
 
 
@@ -36,6 +36,20 @@ angular.module('lolgrade', [
            }).then(function(response){
            console.log(response);
            scope.isDisabled = false;
+           console.log(response.data.status.status_code);
+           if (Object.prototype.toString.call(response) === '[object Array]'){
+               $state.go('result');
+           }
+           if (response.data.status.status_code == 404){
+               $state.go('404');
+           }
+           if(response.data.status.status_code == 426){
+               $state.go('overload');
+           }
+           if(response.data.status.status_code == 403){
+               $state.go('404');
+           }
+           //$state.go('result');
        });
    }
 });
