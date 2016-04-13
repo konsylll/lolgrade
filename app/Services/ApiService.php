@@ -7,7 +7,9 @@
  */
 
 namespace App\Services;
+use Guzzle\Common\Exception\GuzzleException;
 use Guzzle\Http\Client;
+use Guzzle\Http\Exception\BadResponseException;
 
 
 class ApiService
@@ -20,25 +22,44 @@ class ApiService
     }
 
     public function getID($name, $server){
-        $response = $this->guzzle->get('https://'.$server.'.api.pvp.net/api/lol/'.$server.'/v1.4/summoner/by-name/'
-            .$name.'?api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json();
+        try {
+            $response = $this->guzzle->get('https://' . $server . '.api.pvp.net/api/lol/' . $server . '/v1.4/summoner/by-name/'
+                . $name . '?api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send();
+        } catch (BadResponseException $e){
+            return $e;
+        } catch (\Exception $e){
+            return $e;
+        }
 
+        $responseBody = $response->json();
         $noSpaceName = str_replace(" ", "", $name);
-        return $response[strtolower($noSpaceName)]['id'];
+        return $responseBody[strtolower($noSpaceName)]['id'];
     }
 
     public function getParticipants($id, $server, $serverID){
-        return $this->guzzle->get('https://'.$server.'.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/'
-        .$serverID.'/'.$id.'?api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json()['participants'];
+        try {
+            return $this->guzzle->get('https://' . $server . '.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/'
+                . $serverID . '/' . $id . '?api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json()['participants'];
+        } catch (BadResponseException $e){
+            return $e;
+        } catch (\Exception $e){
+            return $e;
+        }
     }
 
     public function insertMaxGrades($people, $server, $serverID){
         $allGrades = [];
-        $count = 0;//TODO remove after MTP
+        $count = 0;//TODO remove after MTP This is a pause needed for dev api key (48, 58-62)
         foreach($people as $summ){
-            $grade = $this->guzzle->get('https://'.$server.'.api.pvp.net/championmastery/location/'
-                .$serverID.'/player/'.$summ['summonerId'].'/topchampions?count='
-                .ApiService::$AMOUNT_OF_RETRIEVES.'&api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json();
+            try {
+                $grade = $this->guzzle->get('https://'.$server.'.api.pvp.net/championmastery/location/'
+                    .$serverID.'/player/'.$summ['summonerId'].'/topchampions?count='
+                    .ApiService::$AMOUNT_OF_RETRIEVES.'&api_key=6afe71bf-c760-46b5-9a52-f4ceeb8aa978')->send()->json();
+            } catch (BadResponseException $e){
+                return $e->getResponse()->getBody();
+            } catch (\Exception $e){
+                return 'Invalid data passed. Please check the data.';
+            }
             array_push($allGrades, $grade);
             if($count == 4){  //TODO remove these after MTP
                 sleep(10);    //TODO remove these after MTP

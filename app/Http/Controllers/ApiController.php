@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Guzzle\Http\Exception\BadResponseException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,20 +14,17 @@ class ApiController extends Controller
     {
         $this->api = app('ApiService');
     }
-    //These methods are test
-    public function getID(){
-        echo($this->api->getID('fdgsdfgfdsgfg', 'euw'));
-    }
-    public function getParticipants(){
-        $id = $this->api->getID('Korean Albino', 'euw');
-        dd($this->api->getParticipants($id, 'EUW1'));
-    }
-    //stop
     
     public function getParticipantsMaxGrades(Request $request){
         $r = $request->all();
         $server = strtolower($r['server']);
         $id = $this->api->getID($r['nickname'], $server);
+
+        if($id instanceof BadResponseException){
+            return $id->getResponse()->getBody();
+        } elseif ($id instanceof \Exception) {
+            return $id->getCode();
+        }
         if(!strcmp($r['server'],'EUNE')){
             $serverID = 'EUN1';
         } else
@@ -45,6 +43,12 @@ class ApiController extends Controller
             $serverID = $r['server'].'1';
         }
         $participants = $this->api->getParticipants($id, $server, $serverID);
+        if($participants instanceof BadResponseException){
+            return $participants->getResponse()->getBody();
+        } elseif ($participants instanceof \Exception) {
+            return $participants->getCode();
+        }
+
         return $this->api->insertMaxGrades($participants, $server, $serverID);
     }
 }

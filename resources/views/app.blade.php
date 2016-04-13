@@ -20,6 +20,7 @@
                         <option>LAS</option>
                         <option>OCE</option>
                         <option>KR</option>
+                        <option>JP</option>
                     </select>
                 </div>
             </div>
