@@ -15,7 +15,8 @@ angular.module('lolgrade', [
         controller: "ResultCtrl",
         controllerAs: "result",
         params: {
-            'summoners': null
+            'summonersTeam100': null,
+            'summonersTeam200': null
         }
     }).state('404', {
         url:"/404",
@@ -25,6 +26,13 @@ angular.module('lolgrade', [
         templateUrl: "views/overload.php"
     });
 }).service('ApiService', function ($http, $state) {
+
+    function makeTeam100(arr){
+        return arr.slice(0,arr.length/2);
+    }
+    function makeTeam200(arr){
+        return arr.slice(arr.length/2, arr.length);
+    }
 
     this.getData = function (scope) {
         scope.isDisabled = true;
@@ -38,7 +46,12 @@ angular.module('lolgrade', [
             }).then(function (response) {
             scope.isDisabled = false;
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
-                $state.go('result', {summoners: response.data});
+                var team100 = makeTeam100(response.data);
+                var team200 = makeTeam200(response.data);
+                $state.go('result', {
+                    summonersTeam100: team100,
+                    summonersTeam200: team200
+                });
             } else if (response.data.status.status_code == 404) {
                 $state.go('404');
             } else if (response.data.status.status_code == 426) {
@@ -46,8 +59,6 @@ angular.module('lolgrade', [
             } else if (response.data.status.status_code == 403) {
                 $state.go('404');
             }
-            console.log(response.data);
-            scope.summoners = response.data;
         });
     }
 }).service('ChampionService', function($http){

@@ -1,36 +1,7 @@
-<p>{{summoners}}</p>
 <div class="row team-100">
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[19]}}_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[56]}}_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Maokai_0.jpg" alt="..." class="img-summoner">
-    </div>
+    <summoner ng-repeat="summoner in summonersTeam100"></summoner>
 </div>
 <div class="row versus text-center">VS</div>
 <div class="row team-200">
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Syndra_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ryze_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Caitlyn_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Bard_0.jpg" alt="..." class="img-summoner">
-    </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 compressed">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/AurelionSol_0.jpg" alt="..." class="img-summoner">
-    </div>
+    <summoner ng-repeat="summoner in summonersTeam200"></summoner>
 </div>

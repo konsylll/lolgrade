@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
     </head>
     <body ng-app="lolgrade">
-        <div class="row centered" style="padding:10px 0 10px 0;" ng-controller = "HeaderCtrl as header">
+        <div class="row text-center header-row" style="padding:10px 0 10px 0;" ng-controller = "HeaderCtrl as header">
             <div class="col-md-1"></div>
             <div class="col-md-1">
                 <h1>
@@ -38,6 +38,8 @@
         <div class="container container-summ">
             <div ui-view></div>
         </div>
+
+        <footer></footer>
 
         <script src="{{URL::asset('js/vendor/jquery.js')}}"></script>
         <script src="{{URL::asset('js/vendor/angular.min.js')}}"></script>

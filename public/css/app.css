@@ -5937,39 +5937,158 @@ body {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+h1 {
+  vertical-align: middle;
+  margin: 0;
+  font-size: 32px; }
+
 .img-summoner {
   width: 200px;
   object-fit: cover;
-  border: 2px solid #3c6964;
+  border-color: #3c6964;
+  border-style: solid;
+  border-width: 2px;
   border-radius: 8px; }
 
+.nickname {
+  position: absolute;
+  top: 0;
+  color: white;
+  width: 200px;
+  text-align: center;
+  font-size: 16.6666666667px;
+  background-color: #3c6964;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+.grade {
+  position: absolute;
+  top: 113.333333333px;
+  color: #a5ccc8;
+  width: 200px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold; }
+
+@media (min-width: 1280px) and (max-width: 1600px) {
+  h1 {
+    font-size: 28px; } }
+
 @media (min-width: 967px) and (max-width: 1280px) {
+  h1 {
+    font-size: 21px; }
   .img-summoner {
     width: 175px;
     object-fit: cover;
-    border: 2px solid #3c6964;
-    border-radius: 8px; } }
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px; }
+  .nickname {
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 175px;
+    text-align: center;
+    font-size: 14.5833333333px;
+    background-color: #3c6964;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .grade {
+    position: absolute;
+    top: 99.1666666667px;
+    color: #a5ccc8;
+    width: 175px;
+    text-align: center;
+    font-size: 87.5px;
+    font-weight: bold; } }
 
 @media (min-width: 640px) and (max-width: 966px) {
   .img-summoner {
     width: 125px;
     object-fit: cover;
-    border: 2px solid #3c6964;
-    border-radius: 8px; } }
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px; }
+  .nickname {
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 125px;
+    text-align: center;
+    font-size: 10.4166666667px;
+    background-color: #3c6964;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .grade {
+    position: absolute;
+    top: 70.8333333333px;
+    color: #a5ccc8;
+    width: 125px;
+    text-align: center;
+    font-size: 62.5px;
+    font-weight: bold; }
+  h1 {
+    font-size: 20px; } }
 
 @media (min-width: 480px) and (max-width: 639px) {
   .img-summoner {
     width: 100px;
     object-fit: cover;
-    border: 1px solid #3c6964;
-    border-radius: 8px; } }
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px; }
+  .nickname {
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 100px;
+    text-align: center;
+    font-size: 8.3333333333px;
+    background-color: #3c6964;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .grade {
+    position: absolute;
+    top: 56.6666666667px;
+    color: #a5ccc8;
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold; }
+  h1 {
+    font-size: 20px; } }
 
 @media (max-width: 479px) {
   .img-summoner {
-    width: 70px;
+    width: 75px;
     object-fit: cover;
-    border: 1px solid #3c6964;
-    border-radius: 8px; } }
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px; }
+  .nickname {
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 75px;
+    text-align: center;
+    font-size: 6.25px;
+    background-color: #3c6964;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .grade {
+    position: absolute;
+    top: 42.5px;
+    color: #a5ccc8;
+    width: 75px;
+    text-align: center;
+    font-size: 37.5px;
+    font-weight: bold; }
+  h1 {
+    font-size: 20px; } }
 
 .team-100 {
   padding: 50px 0 50px 0; }
@@ -5999,8 +6118,7 @@ body {
 .header-sea-dark {
   color: #3c6964; }
 
-h1 {
-  vertical-align: middle;
-  margin-top: 0; }
+.header-row {
+  background-color: black; }
 
 /*# sourceMappingURL=app.css.map */

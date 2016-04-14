@@ -3,6 +3,55 @@ $seacolor: #64a7a0;
 $seacolor-dark: darken(#64a7a0, 20%);
 $seacolor-light: lighten(#64a7a0, 20%);
 
+//mixins
+@mixin create-image($width){
+  width: $width+px;
+  object-fit: cover;
+  border-color: $seacolor-dark;
+  border-style: solid;
+  @if $width > 100 {
+    border-width: 2px;
+  } @else {
+    border-width: 1px;
+  }
+  border-radius: 8px;
+}
+
+@mixin create-summoner-name($width){
+  position: absolute;
+  top:0;
+  color: white;
+  width: $width+px;
+  text-align: center;
+  font-size: $width/12+px;
+  background-color: $seacolor-dark;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+@mixin create-grade($width){
+  $fsize: $width / 2;
+  position: absolute;
+  top: ($width*1.8/2-$fsize/2-$width/12)+px;
+  color: $seacolor-light;
+  width: $width+px;
+  text-align: center;
+  font-size: $fsize+px;
+  font-weight: bold;
+}
+
+@mixin combine-image-name-grade($width){
+  .img-summoner{
+    @include create-image($width);
+  }
+  .nickname {
+    @include create-summoner-name($width);
+  }
+  .grade {
+    @include create-grade($width);
+  }
+}
+
 //style
 body {
   background: url('../img/wallp.jpg');
@@ -26,38 +75,45 @@ body {
   padding-bottom: 50px;
 }
 
-@mixin create-image($width, $height, $border-width){
-  width: $width+px;
-  object-fit: cover;
-  border: $border-width+px solid $seacolor-dark;
-  border-radius: 8px;
+h1 {
+  vertical-align: middle;
+  margin: 0;
+  font-size: 32px;
+
 }
 
-.img-summoner {
-  @include create-image(200, 200, 2);
-}
+@include combine-image-name-grade(200);
 
-@media (min-width: 967px) and (max-width: 1280px) {
-  .img-summoner{
-    @include create-image(175,175, 2);
+@media (min-width: 1280px) and (max-width: 1600px) {
+  h1 {
+    font-size: 28px;
   }
+}
+@media (min-width: 967px) and (max-width: 1280px) {
+  h1 {
+    font-size: 21px;
+  }
+  @include combine-image-name-grade(175);
 }
 
 @media (min-width: 640px) and (max-width: 966px) {
-  .img-summoner{
-    @include create-image(125,125, 2);
+  @include combine-image-name-grade(125);
+  h1 {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
-  .img-summoner{
-    @include create-image(100,100, 1);
+  @include combine-image-name-grade(100);
+  h1 {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 479px) {
-  .img-summoner{
-    @include create-image(70,70, 1);
+  @include combine-image-name-grade(75);
+  h1 {
+    font-size: 20px;
   }
 }
 
@@ -96,10 +152,12 @@ body {
   color: $seacolor-dark;
 }
 
-h1 {
-  vertical-align: middle;
-  margin-top: 0;
+.header-row {
+  background-color: black;
 }
+
+
+
 
 
 
