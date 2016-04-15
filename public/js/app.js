@@ -16,7 +16,8 @@ angular.module('lolgrade', [
         controllerAs: "result",
         params: {
             'summonersTeam100': null,
-            'summonersTeam200': null
+            'summonersTeam200': null,
+            'redirected': 0
         }
     }).state('404', {
         url:"/404",
@@ -50,7 +51,8 @@ angular.module('lolgrade', [
                 var team200 = makeTeam200(response.data);
                 $state.go('result', {
                     summonersTeam100: team100,
-                    summonersTeam200: team200
+                    summonersTeam200: team200,
+                    redirected: 1
                 });
             } else if (response.data.status.status_code == 404) {
                 $state.go('404');

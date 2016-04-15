@@ -156,7 +156,13 @@ h1 {
   background-color: black;
 }
 
+.logo:hover, .logo:visited, .logo:link, .logo:active{
+  text-decoration: none;
+}
 
+.S+ {
+  color:red
+}
 
 
 

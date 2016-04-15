@@ -8,7 +8,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-1">
                 <h1>
-                    <b class="header-sea-dark">LOL</b><b class="header-sea">Grade</b>
+                    <a href="/" class="logo"><b class="header-sea-dark">LOL</b><b class="header-sea">Grade</b></a>
                 </h1>
             </div>
             <div class="col-md-5">

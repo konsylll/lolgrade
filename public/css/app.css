@@ -6121,4 +6121,10 @@ h1 {
 .header-row {
   background-color: black; }
 
+.logo:hover, .logo:visited, .logo:link, .logo:active {
+  text-decoration: none; }
+
+.S + {
+  color: red; }
+
 /*# sourceMappingURL=app.css.map */
