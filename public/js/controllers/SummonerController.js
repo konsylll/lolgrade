@@ -12,12 +12,17 @@ angular.module('lolgrade').controller('SummCtrl', function($scope, ApiService, C
     ChampionService.getChamps($scope);
 
     $scope.summoner = $state.params.summoner;
-
     var filteredGrades = $state.params.summoner.allGrades.filter(function(elem){
         return elem['highestGrade'] != undefined;
     });
-
     $scope.chunkedGrades = chunk(filteredGrades,5);
-
-    console.log($scope.chunkedGrades);
+    
+    this.backToResult = function(){
+        $state.go('result',{
+            'summonersTeam100': $state.params.summonersTeam100,
+            'summonersTeam200': $state.params.summonersTeam200,
+            'redirected': 1,
+            'allGrades': $state.params.allGrades
+        });
+    }
 });

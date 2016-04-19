@@ -19,6 +19,9 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
         }
         summoner['allGrades'] = summonerGrades;
         $state.go('info', {
+            'summonersTeam100': team100,
+            'summonersTeam200': team200,
+            'allGrades': $state.params.allGrades,
             summoner: summoner,
             redirected: 1
         });

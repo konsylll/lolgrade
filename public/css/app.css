@@ -6225,4 +6225,7 @@ h1 {
 .logo:hover, .logo:visited, .logo:link, .logo:active {
   text-decoration: none; }
 
+.big {
+  font-size: 32px; }
+
 /*# sourceMappingURL=app.css.map */

@@ -32,6 +32,9 @@ angular.module('lolgrade', [
         controller: "SummCtrl",
         controllerAs: "summ",
         params: {
+            'summonersTeam100': null,
+            'summonersTeam200': null,
+            'allGrades': null,
             'summoner': null,
             'redirected': 0
         }
