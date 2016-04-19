@@ -5968,7 +5968,26 @@ h1 {
   width: 200px;
   text-align: center;
   font-size: 100px;
-  font-weight: bold; }
+  font-weight: bold;
+  z-index: 5; }
+
+.icon-summoner {
+  width: 150px;
+  object-fit: cover;
+  border-color: #3c6964;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px; }
+
+.icon-grade {
+  position: absolute;
+  top: 37.5px;
+  color: #a5ccc8;
+  width: 150px;
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+  z-index: 5; }
 
 @media (min-width: 1280px) and (max-width: 1600px) {
   h1 {
@@ -6001,9 +6020,56 @@ h1 {
     width: 175px;
     text-align: center;
     font-size: 87.5px;
-    font-weight: bold; } }
+    font-weight: bold;
+    z-index: 5; }
+  .icon-summoner {
+    width: 120px;
+    object-fit: cover;
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px; }
+  .icon-grade {
+    position: absolute;
+    top: 30px;
+    color: #a5ccc8;
+    width: 120px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 5; } }
+
+@media (max-width: 991px) {
+  h1 {
+    margin-bottom: 10px; }
+  .input-nickname {
+    width: 100%; }
+  .select-server {
+    width: 100%;
+    display: block; }
+  body {
+    background: none;
+    background-color: black; }
+  .resp-width {
+    width: 100%; } }
 
 @media (min-width: 640px) and (max-width: 966px) {
+  .icon-summoner {
+    width: 130px;
+    object-fit: cover;
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px; }
+  .icon-grade {
+    position: absolute;
+    top: 32.5px;
+    color: #a5ccc8;
+    width: 130px;
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    z-index: 5; }
   .img-summoner {
     width: 125px;
     object-fit: cover;
@@ -6028,11 +6094,28 @@ h1 {
     width: 125px;
     text-align: center;
     font-size: 62.5px;
-    font-weight: bold; }
+    font-weight: bold;
+    z-index: 5; }
   h1 {
     font-size: 20px; } }
 
 @media (min-width: 480px) and (max-width: 639px) {
+  .icon-summoner {
+    width: 85px;
+    object-fit: cover;
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px; }
+  .icon-grade {
+    position: absolute;
+    top: 21.25px;
+    color: #a5ccc8;
+    width: 85px;
+    text-align: center;
+    font-size: 42.5px;
+    font-weight: bold;
+    z-index: 5; }
   .img-summoner {
     width: 100px;
     object-fit: cover;
@@ -6057,11 +6140,28 @@ h1 {
     width: 100px;
     text-align: center;
     font-size: 50px;
-    font-weight: bold; }
+    font-weight: bold;
+    z-index: 5; }
   h1 {
     font-size: 20px; } }
 
 @media (max-width: 479px) {
+  .icon-summoner {
+    width: 55px;
+    object-fit: cover;
+    border-color: #3c6964;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px; }
+  .icon-grade {
+    position: absolute;
+    top: 13.75px;
+    color: #a5ccc8;
+    width: 55px;
+    text-align: center;
+    font-size: 27.5px;
+    font-weight: bold;
+    z-index: 5; }
   .img-summoner {
     width: 75px;
     object-fit: cover;
@@ -6086,7 +6186,8 @@ h1 {
     width: 75px;
     text-align: center;
     font-size: 37.5px;
-    font-weight: bold; }
+    font-weight: bold;
+    z-index: 5; }
   h1 {
     font-size: 20px; } }
 
@@ -6123,8 +6224,5 @@ h1 {
 
 .logo:hover, .logo:visited, .logo:link, .logo:active {
   text-decoration: none; }
-
-.S + {
-  color: red; }
 
 /*# sourceMappingURL=app.css.map */

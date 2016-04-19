@@ -1,6 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/html">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
     </head>
     <body ng-app="lolgrade">
@@ -11,10 +12,10 @@
                     <a href="/" class="logo"><b class="header-sea-dark">LOL</b><b class="header-sea">Grade</b></a>
                 </h1>
             </div>
-            <div class="col-md-5">
-                <div class="input-group">
-                    <input type="text" class="form-control " aria-label="Text input with dropdown button" id="nickname">
-                    <select class="selectpicker" id="server">
+            <div class="col-md-5 resp-width">
+                <div class="input-group input-nickname">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" id="nickname">
+                    <select class="selectpicker select-server" id="server">
                         <option>NA</option>
                         <option>EUW</option>
                         <option>EUNE</option>
@@ -53,5 +54,6 @@
         <script src="{{URL::asset('js/app.js')}}"></script>
         <script src="{{URL::asset('js/controllers/HeaderController.js')}}"></script>
         <script src="{{URL::asset('js/controllers/ResultController.js')}}"></script>
+        <script src="{{URL::asset('js/controllers/SummonerController.js')}}"></script>
     </body>
 </html>

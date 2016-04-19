@@ -17,7 +17,8 @@ angular.module('lolgrade', [
         params: {
             'summonersTeam100': null,
             'summonersTeam200': null,
-            'redirected': 0
+            'redirected': 0,
+            'allGrades': null
         }
     }).state('404', {
         url:"/404",
@@ -25,7 +26,16 @@ angular.module('lolgrade', [
     }).state('overload', {
         url: "/overload",
         templateUrl: "views/overload.php"
-    });
+    }).state('info', {
+        url: "/info",
+        templateUrl: "views/summonerGrades.php",
+        controller: "SummCtrl",
+        controllerAs: "summ",
+        params: {
+            'summoner': null,
+            'redirected': 0
+        }
+    })
 }).service('ApiService', function ($http, $state) {
 
     function makeTeam100(arr){
@@ -47,9 +57,12 @@ angular.module('lolgrade', [
             }).then(function (response) {
             scope.isDisabled = false;
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
-                var team100 = makeTeam100(response.data);
-                var team200 = makeTeam200(response.data);
+                console.log(response.data);
+                var allGrades = response.data[1];
+                var team100 = makeTeam100(response.data[0]);
+                var team200 = makeTeam200(response.data[0]);
                 $state.go('result', {
+                    allGrades: allGrades,
                     summonersTeam100: team100,
                     summonersTeam200: team200,
                     redirected: 1
@@ -76,8 +89,9 @@ angular.module('lolgrade', [
             scope.champions = championsList;
         });
     }
-}).directive('summoner', function(){
+}).directive('summonerInfo', function(){
     return {
-        templateUrl: 'templates/summoner.php'
+        restrict: "E",
+        templateUrl: 'templates/summoner.info.php'
     }
 });

@@ -96,6 +96,6 @@ class ApiService
             }
             $found = 0;
         }
-        return $people;
+        return [$people,$allGrades];
     }
 }

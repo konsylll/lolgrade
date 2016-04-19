@@ -32,12 +32,25 @@ $seacolor-light: lighten(#64a7a0, 20%);
 @mixin create-grade($width){
   $fsize: $width / 2;
   position: absolute;
-  top: ($width*1.8/2-$fsize/2-$width/12)+px;
+  top: ($width*1.8/2 - $fsize/2 - $width/12)+px;
   color: $seacolor-light;
   width: $width+px;
   text-align: center;
   font-size: $fsize+px;
   font-weight: bold;
+  z-index: 5;
+}
+
+@mixin create-icon-grade($width){
+  $fsize: $width / 2;
+  position: absolute;
+  top: ($width/2 - $fsize/2)+px;
+  color: $seacolor-light;
+  width: $width+px;
+  text-align: center;
+  font-size: $fsize+px;
+  font-weight: bold;
+  z-index: 5;
 }
 
 @mixin combine-image-name-grade($width){
@@ -49,6 +62,15 @@ $seacolor-light: lighten(#64a7a0, 20%);
   }
   .grade {
     @include create-grade($width);
+  }
+}
+
+@mixin combine-icon-grade($width){
+  .icon-summoner{
+    @include create-image($width);
+  }
+  .icon-grade {
+    @include create-icon-grade($width);
   }
 }
 
@@ -82,7 +104,9 @@ h1 {
 
 }
 
+
 @include combine-image-name-grade(200);
+@include combine-icon-grade(150);
 
 @media (min-width: 1280px) and (max-width: 1600px) {
   h1 {
@@ -94,9 +118,32 @@ h1 {
     font-size: 21px;
   }
   @include combine-image-name-grade(175);
+  @include combine-icon-grade(120);
+}
+
+@media (max-width: 991px) {
+  h1 {
+    margin-bottom: 10px;
+  }
+  .input-nickname  {
+    width:100%;
+  }
+
+  .select-server {
+    width: 100%;
+    display: block;
+  }
+  body {
+    background: none;
+    background-color: black;
+  }
+  .resp-width {
+    width:100%;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 966px) {
+  @include combine-icon-grade(130);
   @include combine-image-name-grade(125);
   h1 {
     font-size: 20px;
@@ -104,6 +151,7 @@ h1 {
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
+  @include combine-icon-grade(85);
   @include combine-image-name-grade(100);
   h1 {
     font-size: 20px;
@@ -111,6 +159,7 @@ h1 {
 }
 
 @media (max-width: 479px) {
+  @include combine-icon-grade(55);
   @include combine-image-name-grade(75);
   h1 {
     font-size: 20px;
@@ -158,10 +207,6 @@ h1 {
 
 .logo:hover, .logo:visited, .logo:link, .logo:active{
   text-decoration: none;
-}
-
-.S+ {
-  color:red
 }
 
 
