@@ -16,17 +16,17 @@
                 <div class="input-group input-nickname">
                     <input type="text" class="form-control" aria-label="Text input with dropdown button" id="nickname">
                     <select class="selectpicker select-server" id="server">
-                        <option>NA</option>
-                        <option>EUW</option>
-                        <option>EUNE</option>
-                        <option>BR</option>
-                        <option>TR</option>
-                        <option>RU</option>
-                        <option>LAN</option>
-                        <option>LAS</option>
-                        <option>OCE</option>
-                        <option>KR</option>
-                        <option>JP</option>
+                        <option value="NA">NA</option>
+                        <option value="EUW">EUW</option>
+                        <option value="EUNE">EUNE</option>
+                        <option value="BR">BR</option>
+                        <option value="TR">TR</option>
+                        <option value="RU">RU</option>
+                        <option value="LAN">LAN</option>
+                        <option value="LAS">LAS</option>
+                        <option value="OCE">OCE</option>
+                        <option value="KR">KR</option>
+                        <option value="JP">JP</option>
                     </select>
                 </div>
             </div>

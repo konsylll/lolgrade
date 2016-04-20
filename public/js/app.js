@@ -52,6 +52,8 @@ angular.module('lolgrade', [
         scope.isDisabled = true;
         var nickname = $('#nickname')[0].value;
         var server = $('#server option:selected').text();
+        localStorage.setItem('server', server);
+        localStorage.setItem('nickname', nickname);
         $http.post(
             '/grades',
             {
@@ -91,6 +93,12 @@ angular.module('lolgrade', [
             }
             scope.champions = championsList;
         });
+    }
+}).service('AutofillService', function(){
+    this.getAutofillData = function(scope){
+        scope.autofill = {};
+        scope.autofill.server = localStorage.getItem('server') || 'NA';
+        scope.autofill.nickname = localStorage.getItem('nickname') || '';
     }
 }).directive('summonerInfo', function(){
     return {
