@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('app');
 });
 
+Route::get('/alt', function () {
+    return view('alternative');
+});
+
 Route::post('champs','ApiController@getChampNames');
 Route::post('grades','ApiController@getParticipantsMaxGrades');

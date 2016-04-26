@@ -1,7 +1,7 @@
 //variables
-$seacolor: #64a7a0;
-$seacolor-dark: darken(#64a7a0, 20%);
-$seacolor-light: lighten(#64a7a0, 20%);
+$seacolor: #1E96C7;
+$seacolor-dark: darken($seacolor, 20%);
+$seacolor-light: lighten($seacolor, 20%);
 
 //mixins
 @mixin create-image($width){
@@ -76,9 +76,8 @@ $seacolor-light: lighten(#64a7a0, 20%);
 
 //style
 body {
-  background: url('../img/wallp.jpg');
-  -webkit-background-size:cover;
-  background-size: cover;
+  background-image: none;
+  background-color: black;
 }
 
 .srch-light {
@@ -95,11 +94,6 @@ body {
   margin: 10px 0 10px 0;
 }
 .container-summ {
-  -webkit-border-radius: 5px;
-  -moz-border-radius:5px;
-  border-radius:5px;
-  //background-color: rgba(100, 167, 160, 0.75);
-  background-color: rgba(0,0,0,0.45);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -212,6 +206,10 @@ h1 {
   background-color: black;
 }
 
+.logo {
+  font-size: 36px;
+}
+
 .logo:hover, .logo:visited, .logo:link, .logo:active{
   text-decoration: none;
 }
@@ -223,8 +221,48 @@ h1 {
 .flow-summoner:hover {
   display: inline-block;
   cursor: pointer;
-  box-shadow: inset 0 0 3px 3px rgba(100, 167, 160, 0.75), 0 0 15px 5px rgba(100, 167, 160, 0.75);
+  box-shadow: inset 0 0 3px 3px rgba(30, 150, 199, 0.75), 0 0 15px 5px rgba(30, 150, 199, 0.75);
 }
+
+.header-img {
+  background-image: url('../img/Background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+}
+
+.container-header {
+  padding: 0;
+  margin: auto;
+  max-width:1905px;
+}
+
+.header-img {
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.decorate {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.row {
+  margin: 0;
+}
+
+
+
+
 
 
 
