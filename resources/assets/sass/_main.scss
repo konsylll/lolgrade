@@ -1,7 +1,15 @@
+//bootstrap-select bugfixes
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+  z-index: 2;
+  margin-left: 0px;
+}
+
 //variables
 $seacolor: #1E96C7;
 $seacolor-dark: darken($seacolor, 20%);
 $seacolor-light: lighten($seacolor, 20%);
+$seacolor-superlight: lighten($seacolor, 50%);
+$main-font: 'open-sans';
 
 //mixins
 @mixin create-image($width){
@@ -77,7 +85,7 @@ $seacolor-light: lighten($seacolor, 20%);
 //style
 body {
   background-image: none;
-  background-color: black;
+  background-color: white;
 }
 
 .srch-light {
@@ -136,7 +144,7 @@ h1 {
   }
   body {
     background: none;
-    background-color: black;
+    background-color: white;
   }
   .resp-width {
     width:100%;
@@ -175,35 +183,40 @@ h1 {
   padding: 50px 0 50px 0;
 }
 
-.versus {
-  font-size: 36px;
-  font-weight: bold;
-  color: $seacolor-light;
-}
-
-.article-text{
+.search-text{
+  font-family: $main-font;
   color: $seacolor-light;
   font-size: 24px;
   text-align: center;
 }
-
-.gl-text{
-  color: $seacolor-light;
-  margin-top: 100px;
+.versus {
+  font-family: $main-font;
   font-size: 36px;
+  font-weight: bold;
+  color: $seacolor-dark;
+}
+
+.article-text{
+  font-family: $main-font;
+  color: black;
+  font-size: 24px;
   text-align: center;
 }
 
+.normalized-text {
+  font-weight: normal;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
 .header-sea {
+  font-size: 48px;
   color: $seacolor;
 }
 
 .header-sea-dark {
+  font-size: 48px;
   color: $seacolor-dark;
-}
-
-.header-row {
-  background-color: black;
 }
 
 .logo {
@@ -259,6 +272,40 @@ h1 {
 .row {
   margin: 0;
 }
+
+.logo-block {
+  font-family: broken-glass;
+  margin-top: 10px;
+}
+
+.footer {
+  margin: auto;
+  max-width: 1905px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: $seacolor;
+}
+
+.text {
+  font-weight: 300;
+  font-family: $main-font;
+}
+
+.info-message {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-left-color: $seacolor;
+}
+
+.bg-result{
+  background-color: $seacolor-superlight;
+}
+
+
 
 
 

@@ -6,17 +6,19 @@
 </head>
 <body ng-app="lolgrade">
 <div class="container-fluid container-header">
+    <header>
+        <div class="row text-center logo-block">
+            <h1><a href="/" class="logo"><b class="header-sea-dark normalized-text">LOL</b><b class="header-sea normalized-text">Grade</b></a></h1>
+        </div>
+    </header>
     <div class="header-img row">
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 decorate">
-            <div class="row text-center logo-block">
-                <h1><a href="/" class="logo"><b class="header-sea-dark">LOL</b><b class="header-sea">Grade</b></a></h1>
-            </div>
+
 
             <div class="row">
-                <p class="article-text">
-                    Welcome to the Summoners Rift! With this small application you can get which maximum grades your
-                    team and enemies team have. Just enter your nickname, choose server and search.
+                <p class="search-text">
+                    Type the name, choose the server and GO!
                 </p>
             </div>
 
@@ -39,7 +41,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <button class="btn btn-primary srch-light btn-block" ng-click="header.getData()" id="srch" ng-disabled="isDisabled"><b>Search</b></button>
                 </div>
             </div>
@@ -52,7 +54,11 @@
     </div>
 </div>
 
-<footer></footer>
+<footer>
+    <div class="footer">
+        <b class="text">© 2016 LolGrade. All rights reserved.</b>
+    </div>
+</footer>
 
 <script src="{{URL::asset('js/vendor/jquery.js')}}"></script>
 <script src="{{URL::asset('js/vendor/angular.min.js')}}"></script>

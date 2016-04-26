@@ -5921,9 +5921,21 @@ select.selectpicker {
   width: 100%;
   float: none; }
 
+@font-face {
+  font-family: broken-glass;
+  src: url("../fonts/BrokenGlass.ttf"); }
+
+@font-face {
+  font-family: ftw;
+  src: url("../fonts/AlikeAngular-Regular.ttf"); }
+
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+  z-index: 2;
+  margin-left: 0px; }
+
 body {
   background-image: none;
-  background-color: black; }
+  background-color: white; }
 
 .srch-light {
   background-color: #1E96C7;
@@ -6052,7 +6064,7 @@ h1 {
     display: block; }
   body {
     background: none;
-    background-color: black; }
+    background-color: white; }
   .resp-width {
     width: 100%; } }
 
@@ -6200,30 +6212,36 @@ h1 {
 .team-200 {
   padding: 50px 0 50px 0; }
 
-.versus {
-  font-size: 36px;
-  font-weight: bold;
-  color: #63c1e8; }
-
-.article-text {
+.search-text {
+  font-family: "open-sans";
   color: #63c1e8;
   font-size: 24px;
   text-align: center; }
 
-.gl-text {
-  color: #63c1e8;
-  margin-top: 100px;
+.versus {
+  font-family: "open-sans";
   font-size: 36px;
+  font-weight: bold;
+  color: #11536e; }
+
+.article-text {
+  font-family: "open-sans";
+  color: black;
+  font-size: 24px;
   text-align: center; }
 
+.normalized-text {
+  font-weight: normal;
+  letter-spacing: 2px;
+  vertical-align: middle; }
+
 .header-sea {
+  font-size: 48px;
   color: #1E96C7; }
 
 .header-sea-dark {
+  font-size: 48px;
   color: #11536e; }
-
-.header-row {
-  background-color: black; }
 
 .logo {
   font-size: 36px; }
@@ -6267,5 +6285,32 @@ h1 {
 
 .row {
   margin: 0; }
+
+.logo-block {
+  font-family: broken-glass;
+  margin-top: 10px; }
+
+.footer {
+  margin: auto;
+  max-width: 1905px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #1E96C7; }
+
+.text {
+  font-weight: 300;
+  font-family: "open-sans"; }
+
+.info-message {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-left-color: #1E96C7; }
+
+.bg-result {
+  background-color: #e8f6fc; }
 
 /*# sourceMappingURL=app.css.map */
