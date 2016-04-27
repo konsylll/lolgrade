@@ -9,9 +9,14 @@
                 The Application shows the highest grade every summoner in both teams got by playing the current champ
             </div>
             <div class = "col-md-5">
-                    <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Riven_0.jpg">
-                    <p class="nickname">Nickname</p>
-                    <p class="grade">B+</p>
+                <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Riven_0.jpg">
+                <p class="nickname">Nickname</p>
+                <p class="grade">B+</p>
+                <div>
+                    <p class="pts">59</p>
+                    <p class="division">V</p>
+                    <img class="rank" src="../img/Tiers/CHALLENGER.png">
+                </div>
             </div>
         </div>
     </div>

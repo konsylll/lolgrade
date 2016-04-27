@@ -5,6 +5,10 @@
                 <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg" ng-click="result.goSummoner(100, $index)">
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
+                <div class="shadowed"></div>
+                <p class="pts">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
+                <p class="division">{{summoner.ranked[0].entries[0].division}}</p>
+                <img class="rank" src="../img/Tiers/{{summoner.ranked[0].tier}}.png">
             </div>
         </div>
     </div>
@@ -15,6 +19,10 @@
                 <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg" ng-click="result.goSummoner(200, $index)">
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
+                <div class="shadowed"></div>
+                <p class="pts">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
+                <p class="division">{{summoner.ranked[0].entries[0].division}}</p>
+                <img class="rank" src="../img/Tiers/{{summoner.ranked[0].tier}}.png">
             </div>
         </div>
     </div>

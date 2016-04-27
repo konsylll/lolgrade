@@ -47,6 +47,18 @@ angular.module('lolgrade', [
     function makeTeam200(arr){
         return arr.slice(arr.length/2, arr.length);
     }
+    function mix(arr, ranks){
+        for(var i=0; i<arr.length; i++){
+            arr[i]['ranked'] = ranks[arr[i]['summonerId']]||[{
+                    entries: [{
+                        division: "",
+                        leaguePoints: ""
+                    }],
+                    tier: "PROVISIONAL"
+                }] ;
+        }
+        return arr;
+    }
 
     this.getData = function (scope) {
         scope.isDisabled = true;
@@ -66,6 +78,8 @@ angular.module('lolgrade', [
                 var allGrades = response.data[1];
                 var team100 = makeTeam100(response.data[0]);
                 var team200 = makeTeam200(response.data[0]);
+                var team100 = mix(team100, response.data[2]);
+                var team200 = mix(team200, response.data[2]);
                 $state.go('result', {
                     allGrades: allGrades,
                     summonersTeam100: team100,

@@ -5939,7 +5939,7 @@ body {
 
 .srch-light {
   background-color: #1E96C7;
-  border-color: #11536e; }
+  border-color: #1E96C7; }
 
 .srch-light:hover {
   background-color: #11536e;
@@ -5985,6 +5985,44 @@ h1 {
   font-size: 100px;
   font-weight: bold;
   z-index: 5; }
+
+.pts {
+  text-align: center;
+  position: absolute;
+  top: 310px;
+  left: 39px;
+  color: #1E96C7;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 5; }
+
+.division {
+  text-align: center;
+  position: absolute;
+  top: 310px;
+  left: 175px;
+  color: #1E96C7;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 5; }
+
+.rank {
+  position: absolute;
+  top: 280px;
+  left: 75px;
+  width: 80px;
+  z-index: 5; }
+
+.shadowed {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 280px;
+  height: 77px;
+  left: 18px;
+  width: 195px;
+  z-index: 5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
 .icon-summoner {
   width: 150px;
@@ -6037,6 +6075,40 @@ h1 {
     font-size: 87.5px;
     font-weight: bold;
     z-index: 5; }
+  .pts {
+    text-align: center;
+    position: absolute;
+    top: 271.25px;
+    left: 36px;
+    color: #1E96C7;
+    font-size: 17.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .division {
+    text-align: center;
+    position: absolute;
+    top: 271.25px;
+    left: 155px;
+    color: #1E96C7;
+    font-size: 17.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .rank {
+    position: absolute;
+    top: 245px;
+    left: 67.5px;
+    width: 70px;
+    z-index: 5; }
+  .shadowed {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 245px;
+    height: 67px;
+    left: 18px;
+    width: 170px;
+    z-index: 5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6111,6 +6183,40 @@ h1 {
     font-size: 62.5px;
     font-weight: bold;
     z-index: 5; }
+  .pts {
+    text-align: center;
+    position: absolute;
+    top: 193.75px;
+    left: 30px;
+    color: #1E96C7;
+    font-size: 12.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .division {
+    text-align: center;
+    position: absolute;
+    top: 193.75px;
+    left: 115px;
+    color: #1E96C7;
+    font-size: 12.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .rank {
+    position: absolute;
+    top: 175px;
+    left: 52.5px;
+    width: 50px;
+    z-index: 5; }
+  .shadowed {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 175px;
+    height: 47px;
+    left: 18px;
+    width: 120px;
+    z-index: 5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
   h1 {
     font-size: 20px; } }
 
@@ -6132,7 +6238,7 @@ h1 {
     font-weight: bold;
     z-index: 5; }
   .img-summoner {
-    width: 100px;
+    width: 85px;
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
@@ -6142,21 +6248,55 @@ h1 {
     position: absolute;
     top: 0;
     color: white;
-    width: 100px;
+    width: 85px;
     text-align: center;
-    font-size: 8.3333333333px;
+    font-size: 7.0833333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; }
   .grade {
     position: absolute;
-    top: 56.6666666667px;
+    top: 48.1666666667px;
     color: #63c1e8;
-    width: 100px;
+    width: 85px;
     text-align: center;
-    font-size: 50px;
+    font-size: 42.5px;
     font-weight: bold;
     z-index: 5; }
+  .pts {
+    text-align: center;
+    position: absolute;
+    top: 131.75px;
+    left: 25.2px;
+    color: #1E96C7;
+    font-size: 8.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .division {
+    text-align: center;
+    position: absolute;
+    top: 131.75px;
+    left: 83px;
+    color: #1E96C7;
+    font-size: 8.5px;
+    font-weight: bold;
+    z-index: 5; }
+  .rank {
+    position: absolute;
+    top: 119px;
+    left: 40.5px;
+    width: 34px;
+    z-index: 5; }
+  .shadowed {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 119px;
+    height: 31px;
+    left: 18px;
+    width: 80px;
+    z-index: 5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
   h1 {
     font-size: 20px; } }
 
@@ -6178,7 +6318,7 @@ h1 {
     font-weight: bold;
     z-index: 5; }
   .img-summoner {
-    width: 75px;
+    width: 40px;
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
@@ -6188,21 +6328,55 @@ h1 {
     position: absolute;
     top: 0;
     color: white;
-    width: 75px;
+    width: 40px;
     text-align: center;
-    font-size: 6.25px;
+    font-size: 3.3333333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; }
   .grade {
     position: absolute;
-    top: 42.5px;
+    top: 22.6666666667px;
     color: #63c1e8;
-    width: 75px;
+    width: 40px;
     text-align: center;
-    font-size: 37.5px;
+    font-size: 20px;
     font-weight: bold;
     z-index: 5; }
+  .pts {
+    text-align: center;
+    position: absolute;
+    top: 62px;
+    left: 19.8px;
+    color: #1E96C7;
+    font-size: 4px;
+    font-weight: bold;
+    z-index: 5; }
+  .division {
+    text-align: center;
+    position: absolute;
+    top: 62px;
+    left: 47px;
+    color: #1E96C7;
+    font-size: 4px;
+    font-weight: bold;
+    z-index: 5; }
+  .rank {
+    position: absolute;
+    top: 56px;
+    left: 27px;
+    width: 16px;
+    z-index: 5; }
+  .shadowed {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 56px;
+    height: 13px;
+    left: 18px;
+    width: 35px;
+    z-index: 5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
   h1 {
     font-size: 20px; } }
 

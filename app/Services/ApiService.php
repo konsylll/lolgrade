@@ -37,6 +37,23 @@ class ApiService
         return $responseBody[strtolower($noSpaceName)]['id'];
     }
 
+    private function getRankedQuery($participants){
+        $query = "https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/";
+        foreach ($participants as $participant){
+            $query = $query.$participant['summonerId'].",";
+        }
+        $query = rtrim($query, ",");
+        $query = $query."/entry?api_key=".ApiService::$API_KEY;
+        try {
+            $ranked = $this->guzzle->get($query)->send()->json();
+        } catch (BadResponseException $e){
+            return $e->getResponse()->getBody();
+        } catch (\Exception $e){
+            return 'Invalid data passed. Please check the data.';
+        }
+        return $ranked;
+    }
+
     public function getParticipants($id, $server, $serverID){
         try {
             return $this->guzzle->get('https://' . $server . '.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/'
@@ -84,18 +101,17 @@ class ApiService
             foreach ($allGrades[$i] as $champGrade){
                 if(isset($champGrade['highestGrade'])){
                   if(!strcmp($people[$i]['championId'],$champGrade['championId'])){
-                       //array_push($grades,$champGrade['highestGrade']);
                        $people[$i]['highestGrade'] = $champGrade['highestGrade'];
                        $found = 1;
                   }
                 }
             }
             if(!$found){
-                //array_push($grades,ApiService::$NO_GRADE);
                 $people[$i]['highestGrade'] = ApiService::$NO_GRADE;
             }
             $found = 0;
         }
-        return [$people,$allGrades];
+        $ranked = $this->getRankedQuery($people);
+        return [$people,$allGrades, $ranked];
     }
 }

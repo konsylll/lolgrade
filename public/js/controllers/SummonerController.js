@@ -22,7 +22,7 @@ angular.module('lolgrade').controller('SummCtrl', function($scope, ApiService, C
             'summonersTeam100': $state.params.summonersTeam100,
             'summonersTeam200': $state.params.summonersTeam200,
             'redirected': 1,
-            'allGrades': $state.params.allGrades
+            'allGrades': $state.params.allGrades,
         });
     }
 });

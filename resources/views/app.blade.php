@@ -41,7 +41,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                     <button class="btn btn-primary srch-light btn-block" ng-click="header.getData()" id="srch" ng-disabled="isDisabled"><b>Search</b></button>
                 </div>
             </div>
