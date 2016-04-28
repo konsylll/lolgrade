@@ -6,8 +6,8 @@
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
-                <p class="pts">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
-                <p class="division">{{summoner.ranked[0].entries[0].division}}</p>
+                <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
+                <p class="division {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].division}}</p>
                 <img class="rank" src="../img/Tiers/{{summoner.ranked[0].tier}}.png">
             </div>
         </div>
@@ -20,8 +20,8 @@
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
-                <p class="pts">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
-                <p class="division">{{summoner.ranked[0].entries[0].division}}</p>
+                <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
+                <p class="division {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].division}}</p>
                 <img class="rank" src="../img/Tiers/{{summoner.ranked[0].tier}}.png">
             </div>
         </div>

@@ -6487,4 +6487,25 @@ h1 {
 .bg-result {
   background-color: #e8f6fc; }
 
+.BRONZE {
+  color: #A75B10; }
+
+.SILVER {
+  color: silver; }
+
+.GOLD {
+  color: gold; }
+
+.PLATINUM {
+  color: #63b4ae; }
+
+.DIAMOND {
+  color: #d5edf1; }
+
+.MASTER {
+  color: #bbca61; }
+
+.CHALLENGER {
+  color: orange; }
+
 /*# sourceMappingURL=app.css.map */

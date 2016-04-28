@@ -14,7 +14,7 @@ class ApiController extends Controller
     {
         $this->api = app('ApiService');
     }
-    
+
     public function getChampNames(){
         return $this->api->getChampNames();
     }

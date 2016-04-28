@@ -23,3 +23,4 @@ Route::get('/alt', function () {
 
 Route::post('champs','ApiController@getChampNames');
 Route::post('grades','ApiController@getParticipantsMaxGrades');
+

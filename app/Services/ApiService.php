@@ -33,8 +33,9 @@ class ApiService
         }
 
         $responseBody = $response->json();
+
         $noSpaceName = str_replace(" ", "", $name);
-        return $responseBody[strtolower($noSpaceName)]['id'];
+        return $responseBody[mb_strtolower($noSpaceName, 'UTF-8')]['id'];
     }
 
     private function getRankedQuery($participants){
