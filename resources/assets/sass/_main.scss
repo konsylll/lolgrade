@@ -9,7 +9,7 @@ $seacolor: #1E96C7;
 $seacolor-dark: darken($seacolor, 20%);
 $seacolor-light: lighten($seacolor, 20%);
 $seacolor-superlight: lighten($seacolor, 50%);
-$main-font: 'open-sans';
+$main-font: ftw;
 
 //mixins
 @mixin create-image($width){

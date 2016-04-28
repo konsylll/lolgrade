@@ -5927,7 +5927,7 @@ select.selectpicker {
 
 @font-face {
   font-family: ftw;
-  src: url("../fonts/AlikeAngular-Regular.ttf"); }
+  src: url("../fonts/CONFN.TTF"); }
 
 .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
   z-index: 2;
@@ -6387,19 +6387,19 @@ h1 {
   padding: 50px 0 50px 0; }
 
 .search-text {
-  font-family: "open-sans";
+  font-family: ftw;
   color: #63c1e8;
   font-size: 24px;
   text-align: center; }
 
 .versus {
-  font-family: "open-sans";
+  font-family: ftw;
   font-size: 36px;
   font-weight: bold;
   color: #11536e; }
 
 .article-text {
-  font-family: "open-sans";
+  font-family: ftw;
   color: black;
   font-size: 24px;
   text-align: center; }
@@ -6476,7 +6476,7 @@ h1 {
 
 .text {
   font-weight: 300;
-  font-family: "open-sans"; }
+  font-family: ftw; }
 
 .info-message {
   padding: 20px;
