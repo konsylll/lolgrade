@@ -12,11 +12,10 @@
                 <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Riven_0.jpg">
                 <p class="nickname">Nickname</p>
                 <p class="grade">B+</p>
-                <div>
-                    <p class="pts">59</p>
-                    <p class="division">V</p>
-                    <img class="rank" src="../img/Tiers/CHALLENGER.png">
-                </div>
+                <div class="shadowed"></div>
+                <p class="pts GOLD">59</p>
+                <p class="division GOLD">V</p>
+                <img class="rank" src="../img/Tiers/GOLD.png">
             </div>
         </div>
     </div>
@@ -26,9 +25,13 @@
                 "NG" means that summoner still hasn't played games by this champions from the grade system has been released.
             </div>
             <div class = "col-md-5 pull-right">
-                    <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Garen_0.jpg">
-                    <p class="nickname">Nickname</p>
-                    <p class="grade">NG</p>
+                <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Garen_0.jpg">
+                <p class="nickname">Nickname</p>
+                <p class="grade">NG</p>
+                <div class="shadowed"></div>
+                <p class="pts BRONZE">38</p>
+                <p class="division BRONZE">III</p>
+                <img class="rank" src="../img/Tiers/BRONZE.png">
             </div>
         </div>
     </div>

@@ -12,8 +12,8 @@
         </div>
     </header>
     <div class="header-img row">
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 decorate">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 decorate">
 
 
             <div class="row">
@@ -41,12 +41,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10">
                     <button class="btn btn-primary srch-light btn-block" ng-click="header.getData()" id="srch" ng-disabled="isDisabled"><b>Search</b></button>
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2 col-sm-2 col-xs-0"></div>
     </div>
 
     <div class="container container-summ">
@@ -56,7 +56,7 @@
 
 <footer>
     <div class="footer">
-        <b class="text">© 2016 LolGrade. All rights reserved.</b>
+        <b class="text">© 2016 LolGrade. All rights reserved.<br>LOLGrade isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</br>
     </div>
 </footer>
 
@@ -70,6 +70,9 @@
 <script>$('.dropdown-toggle').dropdown()</script>
 
 <script src="{{URL::asset('js/app.js')}}"></script>
+<script src="{{URL::asset('js/services/ApiService.js')}}"></script>
+<script src="{{URL::asset('js/services/ChampionService.js')}}"></script>
+<script src="{{URL::asset('js/services/AutofillService.js')}}"></script>
 <script src="{{URL::asset('js/controllers/HeaderController.js')}}"></script>
 <script src="{{URL::asset('js/controllers/ResultController.js')}}"></script>
 <script src="{{URL::asset('js/controllers/SummonerController.js')}}"></script>
