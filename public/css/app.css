@@ -6042,6 +6042,137 @@ h1 {
   font-weight: bold;
   z-index: 5; }
 
+.team-100 {
+  padding: 50px 0 50px 0; }
+
+.team-200 {
+  padding: 50px 0 50px 0; }
+
+.search-text {
+  font-family: ftw;
+  color: #63c1e8;
+  font-size: 24px;
+  text-align: center; }
+
+.versus {
+  font-family: ftw;
+  font-size: 36px;
+  font-weight: bold;
+  color: #11536e; }
+
+.article-text {
+  font-family: ftw;
+  color: black;
+  font-size: 24px;
+  text-align: center; }
+
+.normalized-text {
+  font-weight: normal;
+  letter-spacing: 2px;
+  vertical-align: middle; }
+
+.header-sea {
+  font-size: 48px;
+  color: #1E96C7; }
+
+.header-sea-dark {
+  font-size: 48px;
+  color: #11536e; }
+
+.logo {
+  font-size: 36px; }
+
+.logo:hover, .logo:visited, .logo:link, .logo:active {
+  text-decoration: none; }
+
+.big {
+  font-size: 32px; }
+
+.flow-summoner:hover {
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: inset 0 0 3px 3px rgba(30, 150, 199, 0.75), 0 0 15px 5px rgba(30, 150, 199, 0.75); }
+
+.header-img {
+  background-image: url("../img/Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  background-size: cover; }
+
+.container-header {
+  padding: 0;
+  margin: auto;
+  max-width: 1905px; }
+
+.header-img {
+  padding-top: 200px;
+  padding-bottom: 50px; }
+
+.btn {
+  border-radius: 0; }
+
+.form-control {
+  border-radius: 0; }
+
+.decorate {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px; }
+
+.row {
+  margin: 0; }
+
+.logo-block {
+  font-family: broken-glass;
+  margin-top: 10px; }
+
+.footer {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: auto;
+  max-width: 1905px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #1E96C7; }
+
+.text {
+  font-weight: 300;
+  font-family: ftw; }
+
+.info-message {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-left-color: #1E96C7; }
+
+.bg-result {
+  background-color: #e8f6fc; }
+
+.BRONZE {
+  color: #A75B10; }
+
+.SILVER {
+  color: silver; }
+
+.GOLD {
+  color: gold; }
+
+.PLATINUM {
+  color: #63b4ae; }
+
+.DIAMOND {
+  color: #d5edf1; }
+
+.MASTER {
+  color: #bbca61; }
+
+.CHALLENGER {
+  color: orange; }
+
 @media (min-width: 1280px) and (max-width: 1600px) {
   h1 {
     font-size: 28px; } }
@@ -6380,134 +6511,89 @@ h1 {
   h1 {
     font-size: 20px; } }
 
-.team-100 {
-  padding: 50px 0 50px 0; }
+.img-summoner-stable {
+  width: 200px;
+  object-fit: cover;
+  border-color: #11536e;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px; }
 
-.team-200 {
-  padding: 50px 0 50px 0; }
-
-.search-text {
-  font-family: ftw;
-  color: #63c1e8;
-  font-size: 24px;
-  text-align: center; }
-
-.versus {
-  font-family: ftw;
-  font-size: 36px;
-  font-weight: bold;
-  color: #11536e; }
-
-.article-text {
-  font-family: ftw;
-  color: black;
-  font-size: 24px;
-  text-align: center; }
-
-.normalized-text {
-  font-weight: normal;
-  letter-spacing: 2px;
-  vertical-align: middle; }
-
-.header-sea {
-  font-size: 48px;
-  color: #1E96C7; }
-
-.header-sea-dark {
-  font-size: 48px;
-  color: #11536e; }
-
-.logo {
-  font-size: 36px; }
-
-.logo:hover, .logo:visited, .logo:link, .logo:active {
-  text-decoration: none; }
-
-.big {
-  font-size: 32px; }
-
-.flow-summoner:hover {
-  display: inline-block;
-  cursor: pointer;
-  box-shadow: inset 0 0 3px 3px rgba(30, 150, 199, 0.75), 0 0 15px 5px rgba(30, 150, 199, 0.75); }
-
-.header-img {
-  background-image: url("../img/Background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-clip: border-box; }
-
-.container-header {
-  padding: 0;
-  margin: auto;
-  max-width: 1905px; }
-
-.header-img {
-  padding-top: 200px;
-  padding-bottom: 50px; }
-
-.btn {
-  border-radius: 0; }
-
-.form-control {
-  border-radius: 0; }
-
-.decorate {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  border-radius: 5px; }
-
-.row {
-  margin: 0; }
-
-.logo-block {
-  font-family: broken-glass;
-  margin-top: 10px; }
-
-.footer {
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: auto;
-  max-width: 1905px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.nickname-stable {
+  position: absolute;
+  top: 0;
+  color: white;
+  width: 200px;
   text-align: center;
-  background-color: #1E96C7; }
+  font-size: 16.6666666667px;
+  background-color: #11536e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
-.text {
-  font-weight: 300;
-  font-family: ftw; }
+.grade-stable {
+  position: absolute;
+  top: 113.333333333px;
+  color: #63c1e8;
+  width: 200px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  z-index: 5; }
 
-.info-message {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-  border-radius: 3px;
-  border-left-color: #1E96C7; }
+.pts-stable {
+  text-align: center;
+  position: absolute;
+  top: 310px;
+  left: 39px;
+  color: #1E96C7;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 5; }
 
-.bg-result {
-  background-color: #e8f6fc; }
+.division-stable {
+  text-align: center;
+  position: absolute;
+  top: 310px;
+  left: 175px;
+  color: #1E96C7;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 5; }
 
-.BRONZE {
-  color: #A75B10; }
+.rank-stable {
+  position: absolute;
+  top: 280px;
+  left: 75px;
+  width: 80px;
+  z-index: 5; }
 
-.SILVER {
-  color: silver; }
+.shadowed-stable {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 280px;
+  height: 77px;
+  left: 18px;
+  width: 195px;
+  z-index: 5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
-.GOLD {
-  color: gold; }
+.icon-summoner-stable {
+  width: 150px;
+  object-fit: cover;
+  border-color: #11536e;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px; }
 
-.PLATINUM {
-  color: #63b4ae; }
-
-.DIAMOND {
-  color: #d5edf1; }
-
-.MASTER {
-  color: #bbca61; }
-
-.CHALLENGER {
-  color: orange; }
+.icon-grade-stable {
+  position: absolute;
+  top: 37.5px;
+  color: #63c1e8;
+  width: 150px;
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+  z-index: 5; }
 
 /*# sourceMappingURL=app.css.map */

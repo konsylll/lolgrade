@@ -1,0 +1,57 @@
+@media (min-width: 1280px) and (max-width: 1600px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 967px) and (max-width: 1280px) {
+  h1 {
+    font-size: 21px;
+  }
+  @include combine-image-name-grade(175);
+  @include combine-icon-grade(120);
+}
+
+@media (max-width: 991px) {
+  h1 {
+    margin-bottom: 10px;
+  }
+  .input-nickname  {
+    width:100%;
+  }
+
+  .select-server {
+    width: 100%;
+    display: block;
+  }
+  body {
+    background: none;
+    background-color: white;
+  }
+  .resp-width {
+    width:100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 966px) {
+  @include combine-icon-grade(130);
+  @include combine-image-name-grade(125);
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+  @include combine-icon-grade(85);
+  @include combine-image-name-grade(85);
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  @include combine-icon-grade(55);
+  @include combine-image-name-grade(40);
+  h1 {
+    font-size: 20px;
+  }
+}

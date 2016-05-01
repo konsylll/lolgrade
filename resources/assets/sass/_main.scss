@@ -4,139 +4,6 @@
   margin-left: 0px;
 }
 
-//variables
-$seacolor: #1E96C7;
-$seacolor-dark: darken($seacolor, 20%);
-$seacolor-light: lighten($seacolor, 20%);
-$seacolor-superlight: lighten($seacolor, 50%);
-$main-font: ftw;
-
-//mixins
-@mixin create-image($width){
-  width: $width+px;
-  object-fit: cover;
-  border-color: $seacolor-dark;
-  border-style: solid;
-  @if $width > 100 {
-    border-width: 2px;
-  } @else {
-    border-width: 1px;
-  }
-    border-radius: 8px;
-}
-
-@mixin create-summoner-name($width){
-  position: absolute;
-  top:0;
-  color: white;
-  width: $width+px;
-  text-align: center;
-  font-size: $width/12+px;
-  background-color: $seacolor-dark;
-  border-top-left-radius:5px;
-  border-top-right-radius:5px;
-}
-
-@mixin create-grade($width){
-  $fsize: $width / 2;
-  position: absolute;
-  top: ($width*1.8/2 - $fsize/2 - $width/12)+px;
-  color: $seacolor-light;
-  width: $width+px;
-  text-align: center;
-  font-size: $fsize+px;
-  font-weight: bold;
-  z-index: 5;
-}
-
-@mixin create-icon-grade($width){
-  $fsize: $width / 2;
-  position: absolute;
-  top: ($width/2 - $fsize/2)+px;
-  color: $seacolor-light;
-  width: $width+px;
-  text-align: center;
-  font-size: $fsize+px;
-  font-weight: bold;
-  z-index: 5;
-}
-
-@mixin create-pts($width){
-  text-align: center;
-  $fsize: $width / 10;
-  position: absolute;
-  top: 1.55*$width+px;
-  left: (0.12*$width+15)+px;
-  color: $seacolor;
-  font-size: $fsize+px;
-  font-weight: bold;
-  z-index: 5;
-}
-
-@mixin create-division($width){
-  text-align: center;
-  $fsize: $width / 10;
-  position: absolute;
-  top: 1.55*$width+px;
-  left: (0.8*$width+15)+px;
-  color: $seacolor;
-  font-size: $fsize+px;
-  font-weight: bold;
-  z-index: 5;
-}
-
-@mixin create-tier($width){
-  position: absolute;
-  top: 1.4*$width+px;
-  left: ($width*0.3 + 15)+px;
-  width: ($width*0.4)+px;
-  z-index: 5;
-}
-
-@mixin create-shadowed($width){
-  background-color: rgba(0,0,0,0.6);
-  position: absolute;
-  top: 1.4*$width+px;
-  height: (0.4*$width - 3)+px;
-  left: 18px;
-  width: ($width - 5)+px;
-  z-index: 5;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-@mixin combine-image-name-grade($width){
-  .img-summoner{
-    @include create-image($width);
-  }
-  .nickname {
-    @include create-summoner-name($width);
-  }
-  .grade {
-    @include create-grade($width);
-  }
-  .pts {
-    @include create-pts($width);
-  }
-  .division {
-    @include create-division($width);
-  }
-  .rank{
-    @include create-tier($width);
-  }
-  .shadowed {
-    @include create-shadowed($width);
-  }
-}
-
-@mixin combine-icon-grade($width){
-  .icon-summoner{
-    @include create-image($width);
-  }
-  .icon-grade {
-    @include create-icon-grade($width);
-  }
-}
 
 //style
 body {
@@ -173,63 +40,7 @@ h1 {
 @include combine-image-name-grade(200);
 @include combine-icon-grade(150);
 
-@media (min-width: 1280px) and (max-width: 1600px) {
-  h1 {
-    font-size: 28px;
-  }
-}
-@media (min-width: 967px) and (max-width: 1280px) {
-  h1 {
-    font-size: 21px;
-  }
-  @include combine-image-name-grade(175);
-  @include combine-icon-grade(120);
-}
 
-@media (max-width: 991px) {
-  h1 {
-    margin-bottom: 10px;
-  }
-  .input-nickname  {
-    width:100%;
-  }
-
-  .select-server {
-    width: 100%;
-    display: block;
-  }
-  body {
-    background: none;
-    background-color: white;
-  }
-  .resp-width {
-    width:100%;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 966px) {
-  @include combine-icon-grade(130);
-  @include combine-image-name-grade(125);
-  h1 {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 639px) {
-  @include combine-icon-grade(85);
-  @include combine-image-name-grade(85);
-  h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 479px) {
-  @include combine-icon-grade(55);
-  @include combine-image-name-grade(40);
-  h1 {
-    font-size: 20px;
-  }
-}
 
 .team-100 {
   padding: 50px 0 50px 0;
@@ -298,6 +109,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-clip: border-box;
+  background-size: cover;
 }
 
 .container-header {

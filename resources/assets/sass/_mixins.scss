@@ -1,0 +1,161 @@
+//mixins
+@mixin create-image($width){
+  width: $width+px;
+  object-fit: cover;
+  border-color: $seacolor-dark;
+  border-style: solid;
+  @if $width > 100 {
+    border-width: 2px;
+  } @else {
+    border-width: 1px;
+  }
+  border-radius: 8px;
+}
+
+@mixin create-summoner-name($width){
+  position: absolute;
+  top:0;
+  color: white;
+  width: $width+px;
+  text-align: center;
+  font-size: $width/12+px;
+  background-color: $seacolor-dark;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+@mixin create-grade($width){
+  $fsize: $width / 2;
+  position: absolute;
+  top: ($width*1.8/2 - $fsize/2 - $width/12)+px;
+  color: $seacolor-light;
+  width: $width+px;
+  text-align: center;
+  font-size: $fsize+px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+@mixin create-icon-grade($width){
+  $fsize: $width / 2;
+  position: absolute;
+  top: ($width/2 - $fsize/2)+px;
+  color: $seacolor-light;
+  width: $width+px;
+  text-align: center;
+  font-size: $fsize+px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+@mixin create-pts($width){
+  text-align: center;
+  $fsize: $width / 10;
+  position: absolute;
+  top: 1.55*$width+px;
+  left: (0.12*$width+15)+px;
+  color: $seacolor;
+  font-size: $fsize+px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+@mixin create-division($width){
+  text-align: center;
+  $fsize: $width / 10;
+  position: absolute;
+  top: 1.55*$width+px;
+  left: (0.8*$width+15)+px;
+  color: $seacolor;
+  font-size: $fsize+px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+@mixin create-tier($width){
+  position: absolute;
+  top: 1.4*$width+px;
+  left: ($width*0.3 + 15)+px;
+  width: ($width*0.4)+px;
+  z-index: 5;
+}
+
+@mixin create-shadowed($width){
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+  top: 1.4*$width+px;
+  height: (0.4*$width - 3)+px;
+  left: 18px;
+  width: ($width - 5)+px;
+  z-index: 5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@mixin combine-image-name-grade($width){
+  .img-summoner{
+    @include create-image($width);
+  }
+  .nickname {
+    @include create-summoner-name($width);
+  }
+  .grade {
+    @include create-grade($width);
+  }
+  .pts {
+    @include create-pts($width);
+  }
+  .division {
+    @include create-division($width);
+  }
+  .rank{
+    @include create-tier($width);
+  }
+  .shadowed {
+    @include create-shadowed($width);
+  }
+}
+
+@mixin combine-icon-grade($width){
+  .icon-summoner {
+    @include create-image($width);
+  }
+  .icon-grade {
+    @include create-icon-grade($width);
+  }
+}
+
+@mixin combine-image-name-grade-stable($width){
+  .img-summoner-stable{
+    @include create-image($width);
+  }
+  .nickname-stable {
+    @include create-summoner-name($width);
+  }
+  .grade-stable {
+    @include create-grade($width);
+  }
+  .pts-stable {
+    @include create-pts($width);
+  }
+  .division-stable {
+    @include create-division($width);
+  }
+  .rank-stable{
+    @include create-tier($width);
+  }
+  .shadowed-stable {
+    @include create-shadowed($width);
+  }
+}
+
+@mixin combine-icon-grade-stable($width){
+  .icon-summoner-stable {
+    @include create-image($width);
+  }
+  .icon-grade-stable {
+    @include create-icon-grade($width);
+  }
+}
+
+
