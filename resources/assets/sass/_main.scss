@@ -134,7 +134,6 @@ h1 {
 .decorate {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
-  border-radius: 5px;
 }
 
 .row {
@@ -162,6 +161,13 @@ h1 {
   font-family: $main-font;
 }
 
+.main-text{
+  font-weight: 300;
+  font-family: $main-font;
+  font-size: 17px;
+}
+
+
 .info-message {
   padding: 20px;
   margin: 20px 0;
@@ -173,28 +179,12 @@ h1 {
 
 .bg-result{
   background-color: $seacolor-superlight;
+  border-radius: 5px;
 }
 
-.BRONZE {
-  color: #A75B10;
-}
-.SILVER {
-  color: silver;
-}
-.GOLD {
-  color: gold;
-}
-.PLATINUM {
-  color: rgb(99,180,174);
-}
-.DIAMOND {
-  color: rgb(213,237,241);
-}
-.MASTER {
-  color: rgb(187,202,97);
-}
-.CHALLENGER {
-  color: orange;
+.max-margin {
+  margin-bottom: 21%;
+  margin-top: 21%;
 }
 
 

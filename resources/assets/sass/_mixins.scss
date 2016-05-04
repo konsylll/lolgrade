@@ -48,39 +48,46 @@
   z-index: 5;
 }
 
-@mixin create-pts($width){
+@mixin create-pts($width, $mobile: ""){
   text-align: center;
   $fsize: $width / 10;
   position: absolute;
   top: 1.55*$width+px;
-  left: (0.12*$width+15)+px;
-  color: $seacolor;
+  left: (0.12*$width + 15)+px;
   font-size: $fsize+px;
   font-weight: bold;
   z-index: 5;
+  @if $mobile !="" {
+    left: (0.12*$width + $mobile)+px;
+  }
 }
 
-@mixin create-division($width){
+@mixin create-division($width, $mobile: ""){
   text-align: center;
   $fsize: $width / 10;
   position: absolute;
   top: 1.55*$width+px;
-  left: (0.8*$width+15)+px;
-  color: $seacolor;
+  left: (0.8*$width + 15)+px;
   font-size: $fsize+px;
   font-weight: bold;
   z-index: 5;
+  @if $mobile !="" {
+    left: (0.8*$width + $mobile)+px;
+  }
 }
 
-@mixin create-tier($width){
+@mixin create-tier($width, $mobile: ""){
   position: absolute;
   top: 1.4*$width+px;
   left: ($width*0.3 + 15)+px;
   width: ($width*0.4)+px;
   z-index: 5;
+  @if $mobile !="" {
+    left: ($width*0.3 + $mobile)+px;
+  }
 }
 
-@mixin create-shadowed($width){
+@mixin create-shadowed($width, $mobile:""){
   background-color: rgba(0,0,0,0.6);
   position: absolute;
   top: 1.4*$width+px;
@@ -90,9 +97,12 @@
   z-index: 5;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  @if mobile !="" {
+    left: $mobile+1+px;
+  }
 }
 
-@mixin combine-image-name-grade($width){
+@mixin combine-image-name-grade($width, $mobile:""){
   .img-summoner{
     @include create-image($width);
   }
@@ -103,25 +113,39 @@
     @include create-grade($width);
   }
   .pts {
-    @include create-pts($width);
+    @include create-pts($width, $mobile);
   }
   .division {
-    @include create-division($width);
+    @include create-division($width, $mobile);
   }
   .rank{
-    @include create-tier($width);
+    @include create-tier($width, $mobile);
   }
   .shadowed {
-    @include create-shadowed($width);
+    @include create-shadowed($width, $mobile);
   }
+  @if $mobile !="" {
+    .compressed {
+      padding-left: $mobile+px;
+      padding-right: $mobile+px;
+    }
+  }
+
 }
 
-@mixin combine-icon-grade($width){
+@mixin combine-icon-grade($width, $mobile:""){
   .icon-summoner {
     @include create-image($width);
   }
   .icon-grade {
     @include create-icon-grade($width);
+  }
+
+  @if $mobile !="" {
+    .compressed {
+      padding-left: $mobile+px;
+      padding-right: $mobile+px;
+    }
   }
 }
 

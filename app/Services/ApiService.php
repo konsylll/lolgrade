@@ -38,8 +38,8 @@ class ApiService
         return $responseBody[mb_strtolower($noSpaceName, 'UTF-8')]['id'];
     }
 
-    private function getRankedQuery($participants){
-        $query = "https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/";
+    private function getRankedQuery($participants, $server){
+        $query = "https://".$server.".api.pvp.net/api/lol/".$server.    "/v2.5/league/by-summoner/";
         foreach ($participants as $participant){
             $query = $query.$participant['summonerId'].",";
         }
@@ -91,7 +91,7 @@ class ApiService
                 return 'Invalid data passed. Please check the data.';
             }
             array_push($allGrades, $grade);
-            if($count == 7){  //TODO remove these after MTP
+            if($count == 5){  //TODO remove these after MTP
                 sleep(10);    //TODO remove these after MTP
             }                 //TODO remove these after MTP
             $count++;         //TODO remove these after MTP
@@ -112,7 +112,7 @@ class ApiService
             }
             $found = 0;
         }
-        $ranked = $this->getRankedQuery($people);
+        $ranked = $this->getRankedQuery($people, $server);
         return [$people,$allGrades, $ranked];
     }
 }

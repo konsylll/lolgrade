@@ -20,15 +20,24 @@ class ApiController extends Controller
     }
     
     public function getParticipantsMaxGrades(Request $request){
+        //Getting request data and setting to variables
         $r = $request->all();
         $server = strtolower($r['server']);
-        $id = $this->api->getID($r['nickname'], $server);
+        //caching if
+        if(!$r['id']){
+            $id = $this->api->getID($r['nickname'], $server);
+        } else {
+            $id = $r['id'];
+        }
 
+        //404
         if($id instanceof BadResponseException){
             return $id->getResponse()->getBody();
         } elseif ($id instanceof \Exception) {
             return $id->getCode();
         }
+
+        //Overwriting server names due to changed names in api request
         if(!strcmp($r['server'],'EUNE')){
             $serverID = 'EUN1';
         } else
@@ -46,6 +55,8 @@ class ApiController extends Controller
         } else {
             $serverID = $r['server'].'1';
         }
+
+        //getting players
         $participants = $this->api->getParticipants($id, $server, $serverID);
         if($participants instanceof BadResponseException){
             return $participants->getResponse()->getBody();
@@ -53,6 +64,10 @@ class ApiController extends Controller
             return $participants->getCode();
         }
 
-        return $this->api->insertMaxGrades($participants, $server, $serverID);
+        //inserting max grades and player id (needs for caching)
+        $response = $this->api->insertMaxGrades($participants, $server, $serverID);
+        array_push($response, $id);
+
+        return $response;
     }
 }

@@ -41,17 +41,69 @@
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
-  @include combine-icon-grade(85);
-  @include combine-image-name-grade(85);
+  @include combine-icon-grade(85, 8);
+  @include combine-image-name-grade(105, 8);
+
   h1 {
     font-size: 20px;
   }
+
+  .img-summoner {
+    border-radius: 0;
+  }
+
+  .nickname{
+    border-radius: 0;
+  }
+
+  .container-summ {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-@media (max-width: 479px) {
-  @include combine-icon-grade(55);
-  @include combine-image-name-grade(40);
+@media (min-width: 361px) and (max-width: 479px) {
+  @include combine-icon-grade(55, 3);
+  @include combine-image-name-grade(69, 3);
+
   h1 {
     font-size: 20px;
+  }
+
+  .img-summoner {
+    border-radius: 0;
+  }
+
+  .nickname{
+    border-radius: 0;
+  }
+
+
+  .container-summ {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 361px) {
+  @include combine-icon-grade(55, 3);
+  @include combine-image-name-grade(60, 3);
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .img-summoner {
+    border-radius: 0;
+  }
+
+  .nickname{
+    border-radius: 0;
+  }
+
+
+  .container-summ {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

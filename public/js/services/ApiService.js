@@ -1,11 +1,13 @@
-angular.module('lolgrade').service('ApiService', function ($http, $state) {
+angular.module('lolgrade').service('ApiService', function ($http, $state, CachingService) {
 
-    function makeTeam100(arr){
-        return arr.slice(0,arr.length/2);
+    //Using for split result array into 2 teams
+    function makeTeam(arr, team){
+        return arr.filter(function(elem){
+            return elem.teamId == team;
+        });
     }
-    function makeTeam200(arr){
-        return arr.slice(arr.length/2, arr.length);
-    }
+
+    //Adding ranked information to the general result array
     function mix(arr, ranks){
         for(var i=0; i<arr.length; i++){
             arr[i]['ranked'] = ranks[arr[i]['summonerId']]||[{
@@ -20,25 +22,50 @@ angular.module('lolgrade').service('ApiService', function ($http, $state) {
     }
 
     this.getData = function (scope) {
+
+        //Temporary disabling search button
         scope.isDisabled = true;
+        $('#srch')[0].textContent = "Loading...";
+
+        //Getting entered data
         var nickname = $('#nickname')[0].value;
         var server = $('#server option:selected').text();
+
+        //Checking if there is cached nickname
+        var id = null;
+        if (CachingService.isCached(nickname)){
+            id = CachingService.getCachedId(nickname);
+        }
+
+        //Saving last entered data
         localStorage.setItem('server', server);
         localStorage.setItem('nickname', nickname);
+
+        //Getting results
         $http.post(
             '/grades',
             {
                 nickname: nickname,
-                server: server
+                server: server,
+                id: id
             }).then(function (response) {
+
+            //Enabling search button back
             scope.isDisabled = false;
+            $('#srch')[0].textContent = "Search";
+
+            //Go to another view also filtering data and passing to the next view or 404 or overload
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
-                console.log(response.data);
                 var allGrades = response.data[1];
-                var team100 = makeTeam100(response.data[0]);
-                var team200 = makeTeam200(response.data[0]);
+                var team100 = makeTeam(response.data[0], 100);
+                var team200 = makeTeam(response.data[0], 200);
                 var team100 = mix(team100, response.data[2]);
                 var team200 = mix(team200, response.data[2]);
+
+                //Caching ID
+                console.log(response.data[3]);
+                CachingService.setCachedId(nickname, response.data[3]);
+
                 $state.go('result', {
                     allGrades: allGrades,
                     summonersTeam100: team100,
@@ -51,6 +78,8 @@ angular.module('lolgrade').service('ApiService', function ($http, $state) {
                 $state.go('overload');
             } else if (response.data.status.status_code == 403) {
                 $state.go('404');
+            } else if (response.data.status.status_code == 500) {
+                $state.go('overload');
             }
         });
     }

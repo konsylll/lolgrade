@@ -1,4 +1,4 @@
-angular.module('lolgrade').controller('HeaderCtrl', function($scope, ApiService, AutofillService){
+angular.module('lolgrade').controller('HeaderCtrl', function($scope, ApiService, AutofillService, CachingService){
 
     AutofillService.getAutofillData($scope);
     $('#nickname')[0].value = $scope.autofill.nickname;

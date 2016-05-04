@@ -1,4 +1,13 @@
-angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, $state){
+angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, CachingService, $state){
+
+    function is3vs3(team100, team200){
+        var result= false;
+        if(team100.length == 3 && team200.length == 3){
+            result = true;
+        }
+        return result;
+    }
+
     if(!$state.params.redirected) {
         window.location.replace("/");
     }
@@ -7,6 +16,7 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
     var team100 = $state.params.summonersTeam100;
     var team200 = $state.params.summonersTeam200;
 
+    $scope.is3 = is3vs3(team100, team200);
     $scope.summonersTeam100 = team100;
     $scope.summonersTeam200 = team200;
     this.goSummoner = function(team, summonerId){

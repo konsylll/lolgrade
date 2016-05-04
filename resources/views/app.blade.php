@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
+    <title>LoLGrade - League of Legends Maximum grades, Ranked stats, etc.</title>
 </head>
 <body ng-app="lolgrade">
 <div class="container-fluid container-header">
@@ -70,11 +71,13 @@
 <script>$('.dropdown-toggle').dropdown()</script>
 
 <script src="{{URL::asset('js/app.js')}}"></script>
+<script src="{{URL::asset('js/services/CachingService.js')}}"></script>
 <script src="{{URL::asset('js/services/ApiService.js')}}"></script>
 <script src="{{URL::asset('js/services/ChampionService.js')}}"></script>
 <script src="{{URL::asset('js/services/AutofillService.js')}}"></script>
 <script src="{{URL::asset('js/controllers/HeaderController.js')}}"></script>
 <script src="{{URL::asset('js/controllers/ResultController.js')}}"></script>
 <script src="{{URL::asset('js/controllers/SummonerController.js')}}"></script>
+
 </body>
 </html>
