@@ -91,7 +91,7 @@ class ApiService
                 return 'Invalid data passed. Please check the data.';
             }
             array_push($allGrades, $grade);
-            if($count == 5){  //TODO remove these after MTP
+            if($count == 6){  //TODO remove these after MTP
                 sleep(10);    //TODO remove these after MTP
             }                 //TODO remove these after MTP
             $count++;         //TODO remove these after MTP
