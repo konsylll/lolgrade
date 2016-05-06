@@ -5,6 +5,9 @@
             <div class="flow-summoner" ng-click="result.goSummoner(100, $index)">
                 <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
                 <p class="nickname">{{summoner.summonerName}}</p>
+                <img class="img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
+                <img class="img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
+                <img class="img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)}}">
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
                 <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
@@ -21,6 +24,9 @@
             <div class="flow-summoner" ng-click="result.goSummoner(200, $index)">
                 <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
                 <p class="nickname">{{summoner.summonerName}}</p>
+                <img class="img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
+                <img class="img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
+                <img class="img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)}}">
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
                 <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>

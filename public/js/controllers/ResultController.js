@@ -1,4 +1,4 @@
-angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, CachingService, $state){
+angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, CachingService, $state, SpellService){
 
     function is3vs3(team100, team200){
         var result= false;
@@ -6,6 +6,14 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
             result = true;
         }
         return result;
+    }
+
+    this.getSpellUrl = function(id){
+        return SpellService.getSpellUrl(id);
+    }
+
+    this.getTopMastery = function(masteryArr){
+        return SpellService.getTopMastery(masteryArr);
     }
 
     if(!$state.params.redirected) {

@@ -56,6 +56,7 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
 
             //Go to another view also filtering data and passing to the next view or 404 or overload
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
+                console.log(response.data);
                 var allGrades = response.data[1];
                 var team100 = makeTeam(response.data[0], 100);
                 var team200 = makeTeam(response.data[0], 200);

@@ -5992,8 +5992,7 @@ select.selectpicker {
   width: 195px;
   z-index: 5;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  left: "1px"; }
+  border-bottom-right-radius: 5px; }
 
 .icon-summoner-stable {
   width: 150px;
@@ -6104,8 +6103,25 @@ h1 {
   width: 195px;
   z-index: 5;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  left: "1px"; }
+  border-bottom-right-radius: 5px; }
+
+.img-spell1 {
+  position: absolute;
+  top: 28.5714285714px;
+  width: 28.5714285714px;
+  left: 25px; }
+
+.img-spell2 {
+  position: absolute;
+  top: 64.2857142857px;
+  width: 28.5714285714px;
+  left: 25px; }
+
+.img-mastery {
+  position: absolute;
+  top: 28.5714285714px;
+  width: 28.5714285714px;
+  left: 176.428571429px; }
 
 .icon-summoner {
   width: 150px;
@@ -6308,8 +6324,22 @@ h1 {
     width: 193px;
     z-index: 5;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    left: "1px"; }
+    border-bottom-right-radius: 5px; }
+  .img-spell1 {
+    position: absolute;
+    top: 28.2857142857px;
+    width: 28.2857142857px;
+    left: 24.9px; }
+  .img-spell2 {
+    position: absolute;
+    top: 63.6428571429px;
+    width: 28.2857142857px;
+    left: 24.9px; }
+  .img-mastery {
+    position: absolute;
+    top: 28.2857142857px;
+    width: 28.2857142857px;
+    left: 174.814285714px; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6387,8 +6417,22 @@ h1 {
     width: 153px;
     z-index: 5;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    left: "1px"; }
+    border-bottom-right-radius: 5px; }
+  .img-spell1 {
+    position: absolute;
+    top: 22.5714285714px;
+    width: 22.5714285714px;
+    left: 22.9px; }
+  .img-spell2 {
+    position: absolute;
+    top: 50.7857142857px;
+    width: 22.5714285714px;
+    left: 22.9px; }
+  .img-mastery {
+    position: absolute;
+    top: 22.5714285714px;
+    width: 22.5714285714px;
+    left: 142.528571429px; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6469,6 +6513,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 11px; }
+  .img-spell1 {
+    position: absolute;
+    top: 17.7142857143px;
+    width: 17.7142857143px;
+    left: 21.2px;
+    left: 16.2px; }
+  .img-spell2 {
+    position: absolute;
+    top: 39.8571428571px;
+    width: 17.7142857143px;
+    left: 21.2px;
+    left: 16.2px; }
+  .img-mastery {
+    position: absolute;
+    top: 17.7142857143px;
+    width: 17.7142857143px;
+    left: 115.085714286px;
+    left: 110.085714286px; }
   .compressed {
     padding-left: 10px;
     padding-right: 10px; }
@@ -6568,6 +6630,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 6px; }
+  .img-spell1 {
+    position: absolute;
+    top: 16px;
+    width: 16px;
+    left: 20.6px;
+    left: 10.6px; }
+  .img-spell2 {
+    position: absolute;
+    top: 36px;
+    width: 16px;
+    left: 20.6px;
+    left: 10.6px; }
+  .img-mastery {
+    position: absolute;
+    top: 16px;
+    width: 16px;
+    left: 105.4px;
+    left: 95.4px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6655,6 +6735,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 6px; }
+  .img-spell1 {
+    position: absolute;
+    top: 14.2857142857px;
+    width: 14.2857142857px;
+    left: 20px;
+    left: 10px; }
+  .img-spell2 {
+    position: absolute;
+    top: 32.1428571429px;
+    width: 14.2857142857px;
+    left: 20px;
+    left: 10px; }
+  .img-mastery {
+    position: absolute;
+    top: 14.2857142857px;
+    width: 14.2857142857px;
+    left: 95.7142857143px;
+    left: 85.7142857143px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6742,6 +6840,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 6px; }
+  .img-spell1 {
+    position: absolute;
+    top: 11.5714285714px;
+    width: 11.5714285714px;
+    left: 19.05px;
+    left: 9.05px; }
+  .img-spell2 {
+    position: absolute;
+    top: 26.0357142857px;
+    width: 11.5714285714px;
+    left: 19.05px;
+    left: 9.05px; }
+  .img-mastery {
+    position: absolute;
+    top: 11.5714285714px;
+    width: 11.5714285714px;
+    left: 80.3785714286px;
+    left: 70.3785714286px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6829,6 +6945,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 4px; }
+  .img-spell1 {
+    position: absolute;
+    top: 9.7142857143px;
+    width: 9.7142857143px;
+    left: 18.4px;
+    left: 6.4px; }
+  .img-spell2 {
+    position: absolute;
+    top: 21.8571428571px;
+    width: 9.7142857143px;
+    left: 18.4px;
+    left: 6.4px; }
+  .img-mastery {
+    position: absolute;
+    top: 9.7142857143px;
+    width: 9.7142857143px;
+    left: 69.8857142857px;
+    left: 57.8857142857px; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -6916,6 +7050,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 4px; }
+  .img-spell1 {
+    position: absolute;
+    top: 7.1428571429px;
+    width: 7.1428571429px;
+    left: 17.5px;
+    left: 5.5px; }
+  .img-spell2 {
+    position: absolute;
+    top: 16.0714285714px;
+    width: 7.1428571429px;
+    left: 17.5px;
+    left: 5.5px; }
+  .img-mastery {
+    position: absolute;
+    top: 7.1428571429px;
+    width: 7.1428571429px;
+    left: 55.3571428571px;
+    left: 43.3571428571px; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7003,6 +7155,24 @@ h1 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     left: 3px; }
+  .img-spell1 {
+    position: absolute;
+    top: 5.2857142857px;
+    width: 5.2857142857px;
+    left: 16.85px;
+    left: 3.85px; }
+  .img-spell2 {
+    position: absolute;
+    top: 11.8928571429px;
+    width: 5.2857142857px;
+    left: 16.85px;
+    left: 3.85px; }
+  .img-mastery {
+    position: absolute;
+    top: 5.2857142857px;
+    width: 5.2857142857px;
+    left: 44.8642857143px;
+    left: 31.8642857143px; }
   .compressed {
     padding-left: 2px;
     padding-right: 2px; }

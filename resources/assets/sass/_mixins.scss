@@ -97,10 +97,41 @@
   z-index: 5;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  @if mobile !="" {
+  @if $mobile !="" {
     left: $mobile+1+px;
   }
 }
+
+@mixin create-spell1($width, $mobile:""){
+  position: absolute;
+  top: $width/7+px;
+  width: $width/7+px;
+  left: ($width/20 + 15)+px;
+  @if $mobile !="" {
+    left: ($width/20 + $mobile)+px;
+  }
+}
+
+@mixin create-spell2($width, $mobile:""){
+  position: absolute;
+  top: ($width/7+$width/7+$width/28)+px;
+  width: $width/7+px;
+  left: ($width/20 + 15)+px;
+  @if $mobile !="" {
+    left: ($width/20 + $mobile)+px;
+  }
+}
+
+@mixin create-mastery($width, $mobile:""){
+  position: absolute;
+  top: $width/7+px;
+  width: $width/7+px;
+  left: ($width - $width/7 - $width/20 + 15)+px;
+  @if $mobile !="" {
+    left: ($width - $width/7 - $width/20 + $mobile)+px;
+  }
+}
+
 
 @mixin combine-image-name-grade($width, $mobile:""){
   .img-summoner{
@@ -124,6 +155,17 @@
   .shadowed {
     @include create-shadowed($width, $mobile);
   }
+
+  .img-spell1 {
+    @include create-spell1($width, $mobile);
+  }
+  .img-spell2 {
+    @include create-spell2($width, $mobile);
+  }
+  .img-mastery {
+    @include create-mastery($width, $mobile);
+  }
+
   @if $mobile !="" {
     .compressed {
       padding-left: $mobile+px;
