@@ -6,7 +6,11 @@
 
 
 //style
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   background-image: none;
   background-color: white;
 }
@@ -183,8 +187,15 @@ h1 {
 }
 
 .max-margin {
-  margin-bottom: 22%;
-  margin-top: 22%;
+  margin:auto;
+}
+
+.wrap {
+  min-height: 100%;
+}
+
+.bordered {
+  border: 1px solid $seacolor-dark; 
 }
 
 

@@ -8,6 +8,16 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
         return result;
     }
 
+    function getRequester(arr1, arr2, id){
+        var requester = arr1.filter(function(player){
+            return player.summonerId == id
+        }) || arr2.filter(function(player){
+            return player.summonerId == id
+        });
+        console.log(requester);
+        return requester;
+    }
+
     this.getSpellUrl = function(id){
         return SpellService.getSpellUrl(id);
     }
@@ -16,6 +26,8 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
         return SpellService.getTopMastery(masteryArr);
     }
 
+
+
     if(!$state.params.redirected) {
         window.location.replace("/");
     }
@@ -23,7 +35,9 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
 
     var team100 = $state.params.summonersTeam100;
     var team200 = $state.params.summonersTeam200;
+    var requesterId = $state.params.summoner;
 
+    $scope.requester = getRequester(team100, team200, requesterId);
     $scope.is3 = is3vs3(team100, team200);
     $scope.summonersTeam100 = team100;
     $scope.summonersTeam200 = team200;

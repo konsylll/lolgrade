@@ -6016,7 +6016,11 @@ select.selectpicker {
   z-index: 2;
   margin-left: 0px; }
 
+html {
+  height: 100%; }
+
 body {
+  height: 100%;
   background-image: none;
   background-color: white; }
 
@@ -6257,8 +6261,13 @@ h1 {
   border-radius: 5px; }
 
 .max-margin {
-  margin-bottom: 22%;
-  margin-top: 22%; }
+  margin: auto; }
+
+.wrap {
+  min-height: 100%; }
+
+.bordered {
+  border: 1px solid #11536e; }
 
 @media (min-width: 1281px) and (max-width: 1600px) {
   h1 {
