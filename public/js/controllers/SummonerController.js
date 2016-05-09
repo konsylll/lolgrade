@@ -15,6 +15,7 @@ angular.module('lolgrade').controller('SummCtrl', function($scope, ApiService, C
     var filteredGrades = $state.params.summoner.allGrades.filter(function(elem){
         return elem['highestGrade'] != undefined;
     });
+
     $scope.chunkedGrades = chunk(filteredGrades,5);
     
     this.backToResult = function(){

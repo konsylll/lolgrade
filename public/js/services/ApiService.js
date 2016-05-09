@@ -58,6 +58,7 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
                 console.log(response.data);
                 var allGrades = response.data[1];
+                console.log(allGrades);
                 var team100 = makeTeam(response.data[0], 100);
                 var team200 = makeTeam(response.data[0], 200);
                 var team100 = mix(team100, response.data[2]);
