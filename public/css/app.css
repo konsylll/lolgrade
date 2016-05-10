@@ -6130,6 +6130,22 @@ h1 {
   width: 33.3333333333px;
   left: 171.666666667px; }
 
+.summoner-icon {
+  width: 100px;
+  border-radius: 8px; }
+
+.team {
+  padding: 50px 0 50px 0; }
+
+.requester-text {
+  margin-bottom: 0;
+  font-size: 40px;
+  color: #11536e; }
+
+.requester-description {
+  font-size: 25px;
+  color: #11536e; }
+
 .icon-summoner {
   width: 150px;
   object-fit: cover;
@@ -6151,12 +6167,6 @@ h1 {
 
 .icon-margin {
   margin-top: 30px; }
-
-.team-100 {
-  padding: 50px 0 50px 0; }
-
-.team-200 {
-  padding: 50px 0 50px 0; }
 
 .search-text {
   font-family: ftw;
@@ -6274,8 +6284,11 @@ h1 {
 .bordered {
   border: 1px solid #11536e; }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important; }
+h2 {
+  font-weight: 300;
+  font-family: ftw;
+  font-size: 24px;
+  vertical-align: middle; }
 
 @media (min-width: 1281px) and (max-width: 1600px) {
   h1 {
@@ -6358,6 +6371,18 @@ h1 {
     top: 28.2857142857px;
     width: 33px;
     left: 170.1px; }
+  .summoner-icon {
+    width: 99px;
+    border-radius: 7.92px; }
+  .team {
+    padding: 49.5px 0 49.5px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 39.6px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 24.75px;
+    color: #11536e; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6455,6 +6480,18 @@ h1 {
     top: 22.5714285714px;
     width: 26.3333333333px;
     left: 138.766666667px; }
+  .summoner-icon {
+    width: 79px;
+    border-radius: 6.32px; }
+  .team {
+    padding: 39.5px 0 39.5px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 31.6px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 19.75px;
+    color: #11536e; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6557,6 +6594,18 @@ h1 {
     width: 20.6666666667px;
     left: 112.133333333px;
     left: 107.133333333px; }
+  .summoner-icon {
+    width: 62px;
+    border-radius: 4.96px; }
+  .team {
+    padding: 31px 0 31px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 24.8px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 15.5px;
+    color: #11536e; }
   .compressed {
     padding-left: 10px;
     padding-right: 10px; }
@@ -6678,6 +6727,18 @@ h1 {
     width: 18.6666666667px;
     left: 102.733333333px;
     left: 92.7333333333px; }
+  .summoner-icon {
+    width: 56px;
+    border-radius: 4.48px; }
+  .team {
+    padding: 28px 0 28px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 22.4px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 14px;
+    color: #11536e; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6787,6 +6848,18 @@ h1 {
     width: 16.6666666667px;
     left: 93.3333333333px;
     left: 83.3333333333px; }
+  .summoner-icon {
+    width: 50px;
+    border-radius: 4px; }
+  .team {
+    padding: 25px 0 25px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 12.5px;
+    color: #11536e; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6896,6 +6969,18 @@ h1 {
     width: 13.5px;
     left: 78.45px;
     left: 68.45px; }
+  .summoner-icon {
+    width: 40.5px;
+    border-radius: 3.24px; }
+  .team {
+    padding: 20.25px 0 20.25px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 16.2px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 10.125px;
+    color: #11536e; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -7005,6 +7090,18 @@ h1 {
     width: 11.3333333333px;
     left: 68.2666666667px;
     left: 56.2666666667px; }
+  .summoner-icon {
+    width: 34px;
+    border-radius: 2.72px; }
+  .team {
+    padding: 17px 0 17px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 13.6px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 8.5px;
+    color: #11536e; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7114,6 +7211,18 @@ h1 {
     width: 8.3333333333px;
     left: 54.1666666667px;
     left: 42.1666666667px; }
+  .summoner-icon {
+    width: 25px;
+    border-radius: 2px; }
+  .team {
+    padding: 12.5px 0 12.5px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 10px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 6.25px;
+    color: #11536e; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7223,6 +7332,18 @@ h1 {
     width: 6.1666666667px;
     left: 43.9833333333px;
     left: 30.9833333333px; }
+  .summoner-icon {
+    width: 18.5px;
+    border-radius: 1.48px; }
+  .team {
+    padding: 9.25px 0 9.25px 0; }
+  .requester-text {
+    margin-bottom: 0;
+    font-size: 7.4px;
+    color: #11536e; }
+  .requester-description {
+    font-size: 4.625px;
+    color: #11536e; }
   .compressed {
     padding-left: 2px;
     padding-right: 2px; }

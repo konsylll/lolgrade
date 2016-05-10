@@ -24,6 +24,7 @@ angular.module('lolgrade').controller('SummCtrl', function($scope, ApiService, C
             'summonersTeam200': $state.params.summonersTeam200,
             'redirected': 1,
             'allGrades': $state.params.allGrades,
+            'gameMode': $state.params.gameMode
         });
     }
 });

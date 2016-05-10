@@ -6,8 +6,8 @@
     <div class="info-message">
         <div class ="row">
             <div class = "col-md-8 col-sm-8 col-xs-8 main-text">
-                The main idea to show people detailed statistics about grades. 
-                The application provides you information about the current game and which maximum grade every player in your team and in enemy team got by champions they are playing now. 
+                    The main idea of the application is to show people detailed statistics about grades. 
+                    Here you can find how you and your teammates along with your enemies perfomed by the champions which you are playing now.
             </div>
             <div class = "col-md-2 col-sm-2 col-xs-2 compressed">
                 <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Riven_0.jpg">
@@ -26,7 +26,8 @@
     <div class="info-message">
         <div class ="row">
             <div class = "col-md-8 col-sm-8 col-xs-8 main-text">
-                "NG" grade means that summoner still hasn't played games by this champion in the current season.
+                "NG" grade means that summoner still hasn't played games by this champion in the current season. 
+                But please note that some games could have been played before the grade system was released.
             </div>
             <div class = "col-md-2 col-sm-2 col-xs-2 compressed">
                 <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Garen_0.jpg">
@@ -36,16 +37,16 @@
                 <img class="bordered img-mastery img-circle" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/mastery/6261.png">
                 <p class="grade">NG</p>
                 <div class="shadowed"></div>
-                <p class="pts BRONZE">38</p>
-                <p class="division BRONZE">III</p>
-                <img class="rank" src="../img/Tiers/BRONZE.png">
+                <p class="pts SILVER">38</p>
+                <p class="division SILVER">III</p>
+                <img class="rank" src="../img/Tiers/SILVER.png">
             </div>
         </div>
     </div>
     <div class="info-message">
         <div class ="row">
             <div class = "col-md-8 col-sm-8 col-xs-8  main-text">
-                You can also see how summoners performed on each champion they ever played just clicking on summoner's picture in result set.
+                You can also see how summoners performed on each champion they ever played just clicking on summoner's picture in the result set.
             </div>
             <div class = "col-md-2 col-sm-2 col-xs-2 compressed pull-right">
                 <img class="icon-summoner" src="http://ddragon.leagueoflegends.com/cdn/6.8.1/img/champion/Vayne.png">

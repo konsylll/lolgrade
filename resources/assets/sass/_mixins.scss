@@ -134,6 +134,25 @@
   }
 }
 
+@mixin create-summoner-icon($width){
+  width: $width/2+px;
+  border-radius: $width/25+px;
+}
+
+@mixin create-team($width){
+  padding: $width/4+px 0 $width/4+px 0;
+}
+
+@mixin create-requester-text($width){
+  margin-bottom: 0;
+  font-size: $width/5+px;
+  color: $seacolor-dark;
+}
+
+@mixin create-requester-description($width){
+  font-size: $width/8+px;
+  color: $seacolor-dark;
+}
 
 @mixin combine-image-name-grade($width, $mobile:""){
   .img-summoner{
@@ -166,6 +185,18 @@
   }
   .img-mastery {
     @include create-mastery($width, $mobile);
+  }
+  .summoner-icon {
+    @include create-summoner-icon($width);
+  }
+  .team {
+    @include create-team($width);
+  }
+  .requester-text {
+    @include create-requester-text($width);
+  }
+  .requester-description {
+    @include create-requester-description($width);
   }
 
   @if $mobile !="" {

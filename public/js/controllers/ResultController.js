@@ -1,28 +1,4 @@
 angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, ApiService, ChampionService, CachingService, $state, SpellService, $timeout){
-    
-    //Identifying type of the game 3vs3 or not   
-    function is3vs3(team100, team200){
-        var result = false;
-        if(team100.length == 3 && team200.length == 3){
-            result = true;
-        }
-        return result;
-    }
-
-    //Requester parser
-    function getRequester(arr1, arr2){
-        var nickname = $('#nickname')[0].value;
-
-        var requester = arr1.filter(function(player){
-            return player.summonerName == nickname;
-        }).concat(
-            arr2.filter(function(player){
-                    return player.summonerName == nickname;
-            })
-        );
-
-        return requester[0];
-    }
 
     //Summoner Spells parser
     this.getSpellUrl = function(id){
@@ -41,21 +17,22 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
     var team100 = $state.params.summonersTeam100;
     var team200 = $state.params.summonersTeam200;
     var requesterId = $state.params.summoner;
-    var gameMode = $state.params.gameMode;
+    var gameMode = ApiService.formatStr($state.params.gameMode);
+    var server = $('#server option:selected').text();
 
     //Taking all info about requester
-    $scope.requester = getRequester(team100, team200);
-    console.log($scope.requester);
+    $scope.requester = ApiService.getRequester(team100, team200);
 
     //For 3 vs 3
-    $scope.is3 = is3vs3(team100, team200);
+    $scope.is3 = ApiService.is3vs3(team100, team200);
 
     //Passing teams data to view
     $scope.summonersTeam100 = team100;
     $scope.summonersTeam200 = team200;
 
-    //Setting game mode
+    //Setting game mode and server
     $scope.gameMode = gameMode;
+    $scope.server = ApiService.serverParse(server);
 
     //Triggers when click on summoner in the result set. Prepares the data for detailed summoner info
     this.goSummoner = function(team, summonerId){

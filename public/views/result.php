@@ -1,13 +1,14 @@
 <div class = "bg-result">
     <div class="row">
-        <div class="col-md-2 col-sm-2 col-xs-2">
-            <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{requester.profileIconId}}.png">
+        <div class="col-md-1 col-sm-1 col-xs-1 marged">
+            <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{requester.profileIconId}}.png" class="summoner-icon">
         </div>
-        <div class="col-md-8 col-sm-8 col-xs-8">
-            <p>{{requester.summonerName}} <br> {{gameMode}}</p>
+        <div class="col-md-9 col-sm-9 col-xs-9 marged">
+            <p class="requester-text">{{requester.summonerName}}</p>
+            <p class="requester-description"> {{gameMode}} Game Type, {{server}}</p>
         </div>
     </div>
-    <div class = "row team-100">
+    <div class = "row team">
         <div class="col-md-2 col-sm-2 col-xs-2" ng-show="is3"></div>
         <div class="col-md-2 col-sm-2 col-xs-2 compressed" ng-repeat="summoner in summonersTeam100">
             <div class="flow-summoner" ng-click="result.goSummoner(100, $index)">
@@ -26,7 +27,7 @@
         <div class="col-md-2 col-sm-2 col-xs-2" ng-show="is3"></div>
     </div>
     <div class="row versus text-center">VS</div>
-    <div class="row team-200">
+    <div class="row team">
         <div class="col-md-2 col-sm-2 col-xs-2" ng-show="is3"></div>
         <div class="col-md-2 col-sm-2 col-xs-2 compressed" ng-repeat="summoner in summonersTeam200">
             <div class="flow-summoner" ng-click="result.goSummoner(200, $index)">
