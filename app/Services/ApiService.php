@@ -86,9 +86,9 @@ class ApiService
                     .$serverID.'/player/'.$summ['summonerId'].'/topchampions?count='
                     .ApiService::$AMOUNT_OF_RETRIEVES.'&api_key='.ApiService::$API_KEY)->send()->json();
             } catch (BadResponseException $e){
-                return $e->getResponse()->getBody();
+                return $e;
             } catch (\Exception $e){
-                return 'Invalid data passed. Please check the data.';
+                return $e;
             }
             array_push($allGrades, $grade);
             if($count == 6){  //TODO remove these after MTP
@@ -112,7 +112,14 @@ class ApiService
             }
             $found = 0;
         }
+
         $ranked = $this->getRankedQuery($people, $server);
+        if($ranked instanceof BadResponseException){
+            return $ranked;
+        } elseif ($ranked instanceof \Exception) {
+            return $ranked;
+        }
+
         return [$people,$allGrades, $ranked];
     }
 }

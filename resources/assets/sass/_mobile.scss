@@ -60,6 +60,7 @@
     width: 647px;
   }
 }
+
 @media (min-width: 587px) and (max-width: 676px) {
   @include combine-image-name-grade(100, 5);
   @include combine-icon-grade(108);
@@ -138,6 +139,11 @@
 }
 
 @media (min-width: 361px) and (max-width: 479px) {
+
+  .main-text {
+    font-size: 17px;
+  }
+
   h1 {
     font-size: 20px;
   }
@@ -153,6 +159,10 @@
 }
 
 @media (max-width: 361px) {
+
+  .main-text {
+    font-size: 14px;
+  }
 
   h1 {
     font-size: 20px;

@@ -33,6 +33,7 @@
   text-align: center;
   font-size: $fsize+px;
   font-weight: bold;
+  text-shadow: $width/40+px $width/40+px $seacolor-dark;
   z-index: 5;
 }
 
@@ -45,6 +46,7 @@
   text-align: center;
   font-size: $fsize+px;
   font-weight: bold;
+  text-shadow: $width/40+px $width/40+px $seacolor-dark;
   z-index: 5;
 }
 

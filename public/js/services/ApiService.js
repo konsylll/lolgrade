@@ -78,6 +78,8 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
                 $state.go('404');
             } else if (response.data.status.status_code == 426) {
                 $state.go('overload');
+            } else if (response.data.status.status_code == 429) {
+                $state.go('overload');
             } else if (response.data.status.status_code == 403) {
                 $state.go('404');
             } else if (response.data.status.status_code == 500) {

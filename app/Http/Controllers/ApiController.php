@@ -66,6 +66,11 @@ class ApiController extends Controller
 
         //inserting max grades and player id (needs for caching)
         $response = $this->api->insertMaxGrades($participants, $server, $serverID);
+        if($response instanceof BadResponseException){
+            return $response->getResponse()->getBody();
+        } elseif ($response instanceof \Exception) {
+            return $response->getCode();
+        }
         array_push($response, $id);
 
         return $response;
