@@ -1,10 +1,10 @@
 <div class = "bg-result">
     <div class="row">
         <div class="col-md-2 col-sm-2 col-xs-2">
-            <img ng-src="">
+            <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{requester.profileIconId}}.png">
         </div>
         <div class="col-md-8 col-sm-8 col-xs-8">
-            <p>{{requester.summonerName}}<br>{{}}</p>
+            <p>{{requester.summonerName}} <br> {{gameMode}}</p>
         </div>
     </div>
     <div class = "row team-100">

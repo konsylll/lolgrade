@@ -1,8 +1,8 @@
-angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService, ChampionService, CachingService, $state, SpellService){
-
+angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, ApiService, ChampionService, CachingService, $state, SpellService, $timeout){
+    
     //Identifying type of the game 3vs3 or not   
     function is3vs3(team100, team200){
-        var result= false;
+        var result = false;
         if(team100.length == 3 && team200.length == 3){
             result = true;
         }
@@ -10,14 +10,18 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
     }
 
     //Requester parser
-    function getRequester(arr1, arr2, id){
+    function getRequester(arr1, arr2){
+        var nickname = $('#nickname')[0].value;
+
         var requester = arr1.filter(function(player){
-            return player.summonerId == id
-        }) || arr2.filter(function(player){
-            return player.summonerId == id
-        });
-        console.log(requester);
-        return requester;
+            return player.summonerName == nickname;
+        }).concat(
+            arr2.filter(function(player){
+                    return player.summonerName == nickname;
+            })
+        );
+
+        return requester[0];
     }
 
     //Summoner Spells parser
@@ -30,12 +34,6 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
         return SpellService.getTopMastery(masteryArr);
     }
 
-
-    //Redirect if went manually
-    if(!$state.params.redirected) {
-        window.location.replace("/");
-    }
-
     //Get ID - Name dependencies
     ChampionService.getChamps($scope);
 
@@ -43,9 +41,11 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
     var team100 = $state.params.summonersTeam100;
     var team200 = $state.params.summonersTeam200;
     var requesterId = $state.params.summoner;
+    var gameMode = $state.params.gameMode;
 
     //Taking all info about requester
-    $scope.requester = getRequester(team100, team200, requesterId);
+    $scope.requester = getRequester(team100, team200);
+    console.log($scope.requester);
 
     //For 3 vs 3
     $scope.is3 = is3vs3(team100, team200);
@@ -53,6 +53,9 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
     //Passing teams data to view
     $scope.summonersTeam100 = team100;
     $scope.summonersTeam200 = team200;
+
+    //Setting game mode
+    $scope.gameMode = gameMode;
 
     //Triggers when click on summoner in the result set. Prepares the data for detailed summoner info
     this.goSummoner = function(team, summonerId){
@@ -71,7 +74,8 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, ApiService,
             'summonersTeam200': team200,
             'allGrades': $state.params.allGrades,
             summoner: summoner,
-            redirected: 1
+            redirected: 1,
+            gameMode: gameMode
         });
     }
 });

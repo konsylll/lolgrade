@@ -18,7 +18,13 @@ angular.module('lolgrade', [
             'summonersTeam100': null,
             'summonersTeam200': null,
             'redirected': 0,
-            'allGrades': null
+            'allGrades': null,
+            'gameMode': null
+        },
+        onEnter: function($state, $stateParams){
+            if(!$stateParams.redirected) {
+                $state.go("main");
+            }
         }
     }).state('404', {
         url:"/404",
@@ -36,7 +42,8 @@ angular.module('lolgrade', [
             'summonersTeam200': null,
             'allGrades': null,
             'summoner': null,
-            'redirected': 0
+            'redirected': 0,
+            'gameMode': null
         }
     })
 }).directive('summonerInfo', function(){

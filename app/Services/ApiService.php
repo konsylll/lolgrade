@@ -58,7 +58,7 @@ class ApiService
     public function getParticipants($id, $server, $serverID){
         try {
             return $this->guzzle->get('https://' . $server . '.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/'
-                . $serverID . '/' . $id . '?api_key='.ApiService::$API_KEY)->send()->json()['participants'];
+                . $serverID . '/' . $id . '?api_key='.ApiService::$API_KEY)->send()->json();
         } catch (BadResponseException $e){
             return $e;
         } catch (\Exception $e){
@@ -78,6 +78,8 @@ class ApiService
     }
     
     public function insertMaxGrades($people, $server, $serverID){
+        $gameMode = $people['gameMode'];
+        $people = $people['participants'];
         $allGrades = [];
         $count = 0;//TODO remove after MTP This is a pause needed for dev api key (48, 58-62)
         foreach($people as $summ){
@@ -120,6 +122,6 @@ class ApiService
             return $ranked;
         }
 
-        return [$people,$allGrades, $ranked];
+        return [$people,$allGrades, $ranked, $gameMode];
     }
 }

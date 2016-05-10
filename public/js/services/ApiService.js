@@ -64,9 +64,10 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
                 var team100 = mix(team100, response.data[2]);
                 var team200 = mix(team200, response.data[2]);
 
+                var gameMode = response.data[3];
+
                 //Caching ID
-                console.log(response.data[3]);
-                CachingService.setCachedId(nickname, response.data[3]);
+                CachingService.setCachedId(nickname, response.data[4]);
 
                 $state.go('result', {
                     allGrades: allGrades,
