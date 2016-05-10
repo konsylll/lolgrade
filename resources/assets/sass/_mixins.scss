@@ -128,9 +128,9 @@
   position: absolute;
   top: $width/7+px;
   width: $width/6+px;
-  left: ($width - $width/7 - $width/20 + 15)+px;
+  left: ($width - $width/6 - $width/20 + 15)+px;
   @if $mobile !="" {
-    left: ($width - $width/7 - $width/20 + $mobile)+px;
+    left: ($width - $width/6 - $width/20 + $mobile)+px;
   }
 }
 
