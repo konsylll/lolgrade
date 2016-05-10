@@ -107,7 +107,7 @@
 @mixin create-spell1($width, $mobile:""){
   position: absolute;
   top: $width/7+px;
-  width: $width/7+px;
+  width: $width/6+px;
   left: ($width/20 + 15)+px;
   @if $mobile !="" {
     left: ($width/20 + $mobile)+px;
@@ -116,8 +116,8 @@
 
 @mixin create-spell2($width, $mobile:""){
   position: absolute;
-  top: ($width/7+$width/7+$width/28)+px;
-  width: $width/7+px;
+  top: ($width/7+$width/6+$width/28)+px;
+  width: $width/6+px;
   left: ($width/20 + 15)+px;
   @if $mobile !="" {
     left: ($width/20 + $mobile)+px;
@@ -127,7 +127,7 @@
 @mixin create-mastery($width, $mobile:""){
   position: absolute;
   top: $width/7+px;
-  width: $width/7+px;
+  width: $width/6+px;
   left: ($width - $width/7 - $width/20 + 15)+px;
   @if $mobile !="" {
     left: ($width - $width/7 - $width/20 + $mobile)+px;
@@ -183,6 +183,9 @@
   }
   .icon-grade {
     @include create-icon-grade($width);
+  }
+  .icon-margin {
+    margin-top: $width/5+px;
   }
 
   @if $mobile !="" {

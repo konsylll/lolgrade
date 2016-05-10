@@ -40,11 +40,8 @@ h1 {
 
 }
 
-
 @include combine-image-name-grade(200);
 @include combine-icon-grade(150);
-
-
 
 .team-100 {
   padding: 50px 0 50px 0;
@@ -119,7 +116,7 @@ h1 {
 .container-header {
   padding: 0;
   margin: auto;
-  max-width:1905px;
+  max-width:1920px;
 }
 
 .header-img {
@@ -185,10 +182,6 @@ h1 {
 .bg-result{
   background-color: $seacolor-superlight;
   border-radius: 5px;
-}
-
-.max-margin {
-  margin:auto;
 }
 
 .wrap {

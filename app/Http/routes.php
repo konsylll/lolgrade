@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('/alt', function () {
-    return view('alternative');
-});
+Route::get('{all}', function(){
+	return redirect('http://lolgrade.com/');
+})->where('all', '.*');
 
 Route::post('champs','ApiController@getChampNames');
 Route::post('grades','ApiController@getParticipantsMaxGrades');
