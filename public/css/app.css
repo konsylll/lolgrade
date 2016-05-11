@@ -6126,9 +6126,9 @@ h1 {
 
 .img-mastery {
   position: absolute;
-  top: 28.5714285714px;
+  top: 109.523809524px;
   width: 33.3333333333px;
-  left: 171.666666667px; }
+  left: 25px; }
 
 .summoner-icon {
   width: 100px;
@@ -6145,6 +6145,12 @@ h1 {
 .requester-description {
   font-size: 25px;
   color: #11536e; }
+
+.grade-badge {
+  position: absolute;
+  top: 28.5714285714px;
+  width: 50px;
+  left: 155px; }
 
 .icon-summoner {
   width: 150px;
@@ -6368,9 +6374,9 @@ h2 {
     left: 24.9px; }
   .img-mastery {
     position: absolute;
-    top: 28.2857142857px;
+    top: 108.428571429px;
     width: 33px;
-    left: 170.1px; }
+    left: 24.9px; }
   .summoner-icon {
     width: 99px;
     border-radius: 7.92px; }
@@ -6383,6 +6389,11 @@ h2 {
   .requester-description {
     font-size: 24.75px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 28.2857142857px;
+    width: 49.5px;
+    left: 153.6px; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6477,9 +6488,9 @@ h2 {
     left: 22.9px; }
   .img-mastery {
     position: absolute;
-    top: 22.5714285714px;
+    top: 86.5238095238px;
     width: 26.3333333333px;
-    left: 138.766666667px; }
+    left: 22.9px; }
   .summoner-icon {
     width: 79px;
     border-radius: 6.32px; }
@@ -6492,6 +6503,11 @@ h2 {
   .requester-description {
     font-size: 19.75px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 22.5714285714px;
+    width: 39.5px;
+    left: 125.6px; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
@@ -6590,10 +6606,10 @@ h2 {
     left: 16.2px; }
   .img-mastery {
     position: absolute;
-    top: 17.7142857143px;
+    top: 67.9047619048px;
     width: 20.6666666667px;
-    left: 112.133333333px;
-    left: 107.133333333px; }
+    left: 21.2px;
+    left: 16.2px; }
   .summoner-icon {
     width: 62px;
     border-radius: 4.96px; }
@@ -6606,6 +6622,12 @@ h2 {
   .requester-description {
     font-size: 15.5px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 17.7142857143px;
+    width: 31px;
+    left: 101.8px;
+    left: 96.8px; }
   .compressed {
     padding-left: 10px;
     padding-right: 10px; }
@@ -6723,10 +6745,10 @@ h2 {
     left: 10.6px; }
   .img-mastery {
     position: absolute;
-    top: 16px;
+    top: 61.3333333333px;
     width: 18.6666666667px;
-    left: 102.733333333px;
-    left: 92.7333333333px; }
+    left: 20.6px;
+    left: 10.6px; }
   .summoner-icon {
     width: 56px;
     border-radius: 4.48px; }
@@ -6739,6 +6761,12 @@ h2 {
   .requester-description {
     font-size: 14px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 16px;
+    width: 28px;
+    left: 93.4px;
+    left: 83.4px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6844,10 +6872,10 @@ h2 {
     left: 10px; }
   .img-mastery {
     position: absolute;
-    top: 14.2857142857px;
+    top: 54.7619047619px;
     width: 16.6666666667px;
-    left: 93.3333333333px;
-    left: 83.3333333333px; }
+    left: 20px;
+    left: 10px; }
   .summoner-icon {
     width: 50px;
     border-radius: 4px; }
@@ -6860,6 +6888,12 @@ h2 {
   .requester-description {
     font-size: 12.5px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 14.2857142857px;
+    width: 25px;
+    left: 85px;
+    left: 75px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6965,10 +6999,10 @@ h2 {
     left: 9.05px; }
   .img-mastery {
     position: absolute;
-    top: 11.5714285714px;
+    top: 44.3571428571px;
     width: 13.5px;
-    left: 78.45px;
-    left: 68.45px; }
+    left: 19.05px;
+    left: 9.05px; }
   .summoner-icon {
     width: 40.5px;
     border-radius: 3.24px; }
@@ -6981,6 +7015,12 @@ h2 {
   .requester-description {
     font-size: 10.125px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 11.5714285714px;
+    width: 20.25px;
+    left: 71.7px;
+    left: 61.7px; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -7086,10 +7126,10 @@ h2 {
     left: 6.4px; }
   .img-mastery {
     position: absolute;
-    top: 9.7142857143px;
+    top: 37.2380952381px;
     width: 11.3333333333px;
-    left: 68.2666666667px;
-    left: 56.2666666667px; }
+    left: 18.4px;
+    left: 6.4px; }
   .summoner-icon {
     width: 34px;
     border-radius: 2.72px; }
@@ -7102,6 +7142,12 @@ h2 {
   .requester-description {
     font-size: 8.5px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 9.7142857143px;
+    width: 17px;
+    left: 62.6px;
+    left: 50.6px; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7207,10 +7253,10 @@ h2 {
     left: 5.5px; }
   .img-mastery {
     position: absolute;
-    top: 7.1428571429px;
+    top: 27.380952381px;
     width: 8.3333333333px;
-    left: 54.1666666667px;
-    left: 42.1666666667px; }
+    left: 17.5px;
+    left: 5.5px; }
   .summoner-icon {
     width: 25px;
     border-radius: 2px; }
@@ -7223,6 +7269,12 @@ h2 {
   .requester-description {
     font-size: 6.25px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 7.1428571429px;
+    width: 12.5px;
+    left: 50px;
+    left: 38px; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7328,10 +7380,10 @@ h2 {
     left: 3.85px; }
   .img-mastery {
     position: absolute;
-    top: 5.2857142857px;
+    top: 20.2619047619px;
     width: 6.1666666667px;
-    left: 43.9833333333px;
-    left: 30.9833333333px; }
+    left: 16.85px;
+    left: 3.85px; }
   .summoner-icon {
     width: 18.5px;
     border-radius: 1.48px; }
@@ -7344,6 +7396,12 @@ h2 {
   .requester-description {
     font-size: 4.625px;
     color: #11536e; }
+  .grade-badge {
+    position: absolute;
+    top: 5.2857142857px;
+    width: 9.25px;
+    left: 40.9px;
+    left: 27.9px; }
   .compressed {
     padding-left: 2px;
     padding-right: 2px; }

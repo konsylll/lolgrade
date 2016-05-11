@@ -77,6 +77,7 @@
 <script src="{{URL::asset('js/services/CachingService.js')}}"></script>
 <script src="{{URL::asset('js/services/ApiService.js')}}"></script>
 <script src="{{URL::asset('js/services/SpellService.js')}}"></script>
+<script src="{{URL::asset('js/services/BadgeService.js')}}"></script>
 <script src="{{URL::asset('js/services/ChampionService.js')}}"></script>
 <script src="{{URL::asset('js/services/AutofillService.js')}}"></script>
 <script src="{{URL::asset('js/controllers/HeaderController.js')}}"></script>

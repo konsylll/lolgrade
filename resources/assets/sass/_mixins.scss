@@ -126,11 +126,11 @@
 
 @mixin create-mastery($width, $mobile:""){
   position: absolute;
-  top: $width/7+px;
+  top: ($width/7+$width/3+$width/14)+px;
   width: $width/6+px;
-  left: ($width - $width/6 - $width/20 + 15)+px;
+  left: ($width/20 + 15)+px;
   @if $mobile !="" {
-    left: ($width - $width/6 - $width/20 + $mobile)+px;
+    left: ($width/20 + $mobile)+px;
   }
 }
 
@@ -152,6 +152,16 @@
 @mixin create-requester-description($width){
   font-size: $width/8+px;
   color: $seacolor-dark;
+}
+
+@mixin create-grade-badge($width, $mobile:""){
+  position: absolute;
+  top: $width/7+px;
+  width: $width/4+px;
+  left: (15 + $width - $width/4 - $width/20)+px;
+  @if $mobile !="" {
+    left: ($mobile + $width - $width/4 - $width/20)+px;
+  }
 }
 
 @mixin combine-image-name-grade($width, $mobile:""){
@@ -197,6 +207,9 @@
   }
   .requester-description {
     @include create-requester-description($width);
+  }
+  .grade-badge {
+    @include create-grade-badge($width, $mobile);
   }
 
   @if $mobile !="" {

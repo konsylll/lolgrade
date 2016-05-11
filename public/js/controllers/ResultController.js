@@ -1,5 +1,6 @@
-angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, ApiService, ChampionService, CachingService, $state, SpellService, $timeout){
+angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, ApiService, ChampionService, CachingService, BadgeService, $state, SpellService, $timeout){
 
+    $scope.wait = false;
     //Summoner Spells parser
     this.getSpellUrl = function(id){
         return SpellService.getSpellUrl(id);
@@ -8,6 +9,17 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
     //Main mastery image parser
     this.getTopMastery = function(masteryArr){
         return SpellService.getTopMastery(masteryArr);
+    }
+
+    //Get Badge Parser
+    this.getBadge = function(team, index){
+        var result = "";
+        if (team == 100){
+            result = allGrades[index].badge;
+        } else if (team == 200){
+            result = allGrades[index+team100.length].badge;
+        }
+        return result;
     }
 
     //Get ID - Name dependencies
@@ -19,6 +31,11 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
     var requesterId = $state.params.summoner;
     var gameMode = ApiService.formatStr($state.params.gameMode);
     var server = $('#server option:selected').text();
+
+    //Setting Badges to allGrades
+    var allGrades = $state.params.allGrades;
+    var numberOfChampions = 130;
+    BadgeService.setBadges(allGrades, numberOfChampions);
 
     //Taking all info about requester
     $scope.requester = ApiService.getRequester(team100, team200);
@@ -39,10 +56,10 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
         //Taking data
         if (team == 100){
             var summoner = team100[summonerId];
-            summoner['allGrades'] = $state.params.allGrades[summonerId];
+            summoner['allGrades'] = allGrades[summonerId];
         } else if (team == 200){
             var summoner = team200[summonerId];
-            summoner['allGrades'] = $state.params.allGrades[summonerId+team100.length];
+            summoner['allGrades'] = allGrades[summonerId+team100.length];
         }
 
         //Go to detailed summ info page
@@ -55,4 +72,5 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
             gameMode: gameMode
         });
     }
+    
 });
