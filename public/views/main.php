@@ -54,6 +54,29 @@
             </div>
         </div>
     </div>
+    <div class="info-message">
+        <div class ="row">
+            <div class = "col-md-8 col-sm-8 col-xs-8  main-text">
+                Achievements:<br>
+                You can achieve specials badges on your summoner picture in the result set if you have played 20 or more champions on S- and higher.<br>
+                For example this guy has performed on S- or higher with 23 champions. He got yellow badge.
+            </div>
+            <div class = "col-md-2 col-sm-2 col-xs-2 compressed">
+                <img class="img-summoner" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ziggs_0.jpg">
+                <p class="nickname">Nickname</p>
+                <p class="badge-hint" ng-show="hint">This summoner has played more than <b>20</b> champions on <b>S-</b> or higher</p>
+                <img class="grade-badge" ng-src="../img/Badge_yellow.png" ng-mouseover="hint = 1" ng-mouseout="hint = 0">
+                <img class="bordered img-spell1 img-circle" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerFlash.png">
+                <img class="bordered img-spell2 img-circle" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/SummonerTeleport.png">
+                <img class="bordered img-mastery img-circle" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/mastery/6261.png">
+                <p class="grade">S</p>
+                <div class="shadowed"></div>
+                <p class="pts SILVER">38</p>
+                <p class="division SILVER">III</p>
+                <img class="rank" src="../img/Tiers/SILVER.png">
+            </div>
+        </div>
+    </div>
     <hr>
     <p class="article-text">
         Have fun with Lol Grade!

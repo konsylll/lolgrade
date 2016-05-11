@@ -5934,6 +5934,7 @@ select.selectpicker {
   object-fit: cover;
   border-color: #11536e;
   border-style: solid;
+  z-index: 200;
   border-width: 2px;
   border-radius: 8px; }
 
@@ -5946,7 +5947,8 @@ select.selectpicker {
   font-size: 16.6666666667px;
   background-color: #11536e;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-right-radius: 5px;
+  z-index: 200; }
 
 .grade-stable {
   position: absolute;
@@ -6000,6 +6002,7 @@ select.selectpicker {
   object-fit: cover;
   border-color: #11536e;
   border-style: solid;
+  z-index: 200;
   border-width: 2px;
   border-radius: 8px; }
 
@@ -6051,6 +6054,7 @@ h1 {
   object-fit: cover;
   border-color: #11536e;
   border-style: solid;
+  z-index: 200;
   border-width: 2px;
   border-radius: 8px; }
 
@@ -6063,7 +6067,8 @@ h1 {
   font-size: 16.6666666667px;
   background-color: #11536e;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-right-radius: 5px;
+  z-index: 200; }
 
 .grade {
   position: absolute;
@@ -6148,15 +6153,31 @@ h1 {
 
 .grade-badge {
   position: absolute;
-  top: 28.5714285714px;
+  top: 25px;
   width: 50px;
   left: 155px; }
+
+.badge-hint {
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  width: 200px;
+  top: 0;
+  left: 215px;
+  border-radius: 8px;
+  border: 2px #11536e solid;
+  font-weight: 300;
+  font-family: ftw;
+  font-size: 18px;
+  vertical-align: middle;
+  z-index: 400; }
 
 .icon-summoner {
   width: 150px;
   object-fit: cover;
   border-color: #11536e;
   border-style: solid;
+  z-index: 200;
   border-width: 2px;
   border-radius: 8px; }
 
@@ -6308,6 +6329,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .nickname {
@@ -6319,7 +6341,8 @@ h2 {
     font-size: 16.5px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 112.2px;
@@ -6391,14 +6414,29 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 28.2857142857px;
+    top: 24.75px;
     width: 49.5px;
     left: 153.6px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 4.95px;
+    width: 198px;
+    top: 0;
+    left: 213px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .icon-grade {
@@ -6422,6 +6460,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .nickname {
@@ -6433,7 +6472,8 @@ h2 {
     font-size: 13.1666666667px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 89.5333333333px;
@@ -6505,14 +6545,29 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 22.5714285714px;
+    top: 19.75px;
     width: 39.5px;
     left: 125.6px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 3.95px;
+    width: 158px;
+    top: 0;
+    left: 173px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .icon-summoner {
     width: 120px;
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .icon-grade {
@@ -6534,6 +6589,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .nickname {
@@ -6545,7 +6601,8 @@ h2 {
     font-size: 10.3333333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 70.2666666667px;
@@ -6624,10 +6681,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 17.7142857143px;
+    top: 15.5px;
     width: 31px;
     left: 101.8px;
     left: 96.8px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 3.1px;
+    width: 124px;
+    top: 0;
+    left: 139px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 10px;
     padding-right: 10px; }
@@ -6636,6 +6707,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .icon-grade {
@@ -6673,6 +6745,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .nickname {
@@ -6684,7 +6757,8 @@ h2 {
     font-size: 9.3333333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 63.4666666667px;
@@ -6763,10 +6837,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 16px;
+    top: 14px;
     width: 28px;
     left: 93.4px;
     left: 83.4px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 2.8px;
+    width: 112px;
+    top: 0;
+    left: 127px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6775,6 +6863,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .icon-grade {
@@ -6800,6 +6889,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .nickname {
@@ -6811,7 +6901,8 @@ h2 {
     font-size: 8.3333333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 56.6666666667px;
@@ -6890,10 +6981,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 14.2857142857px;
+    top: 12.5px;
     width: 25px;
     left: 85px;
     left: 75px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 2.5px;
+    width: 100px;
+    top: 0;
+    left: 115px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -6902,6 +7007,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 2px;
     border-radius: 8px; }
   .icon-grade {
@@ -6927,6 +7033,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .nickname {
@@ -6938,7 +7045,8 @@ h2 {
     font-size: 6.75px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 45.9px;
@@ -7017,10 +7125,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 11.5714285714px;
+    top: 10.125px;
     width: 20.25px;
     left: 71.7px;
     left: 61.7px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 2.025px;
+    width: 81px;
+    top: 0;
+    left: 96px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 5px;
     padding-right: 5px; }
@@ -7029,6 +7151,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .icon-grade {
@@ -7054,6 +7177,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .nickname {
@@ -7065,7 +7189,8 @@ h2 {
     font-size: 5.6666666667px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 38.5333333333px;
@@ -7144,10 +7269,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 9.7142857143px;
+    top: 8.5px;
     width: 17px;
     left: 62.6px;
     left: 50.6px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 1.7px;
+    width: 68px;
+    top: 0;
+    left: 83px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7156,6 +7295,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .icon-grade {
@@ -7181,6 +7321,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .nickname {
@@ -7192,7 +7333,8 @@ h2 {
     font-size: 4.1666666667px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 28.3333333333px;
@@ -7271,10 +7413,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 7.1428571429px;
+    top: 6.25px;
     width: 12.5px;
     left: 50px;
     left: 38px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 1.25px;
+    width: 50px;
+    top: 0;
+    left: 65px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 3px;
     padding-right: 3px; }
@@ -7283,6 +7439,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .icon-grade {
@@ -7308,6 +7465,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .nickname {
@@ -7319,7 +7477,8 @@ h2 {
     font-size: 3.0833333333px;
     background-color: #11536e;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    z-index: 200; }
   .grade {
     position: absolute;
     top: 20.9666666667px;
@@ -7398,10 +7557,24 @@ h2 {
     color: #11536e; }
   .grade-badge {
     position: absolute;
-    top: 5.2857142857px;
+    top: 4.625px;
     width: 9.25px;
     left: 40.9px;
     left: 27.9px; }
+  .badge-hint {
+    position: absolute;
+    background-color: white;
+    padding: 0.925px;
+    width: 37px;
+    top: 0;
+    left: 52px;
+    border-radius: 8px;
+    border: 2px #11536e solid;
+    font-weight: 300;
+    font-family: ftw;
+    font-size: 18px;
+    vertical-align: middle;
+    z-index: 400; }
   .compressed {
     padding-left: 2px;
     padding-right: 2px; }
@@ -7410,6 +7583,7 @@ h2 {
     object-fit: cover;
     border-color: #11536e;
     border-style: solid;
+    z-index: 200;
     border-width: 1px;
     border-radius: 8px; }
   .icon-grade {

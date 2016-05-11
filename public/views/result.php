@@ -14,7 +14,8 @@
             <div class="flow-summoner" ng-click="result.goSummoner(100, $index)">
                 <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
                 <p class="nickname">{{summoner.summonerName}}</p>
-                <img class="grade-badge" ng-src="{{result.getBadge(100,$index)}}" ng-show="result.getBadge(100,$index)">
+                <p class="badge-hint" ng-show="hint">{{result.getHint(100, $index)}}</p>
+                <img class="grade-badge" ng-src="{{result.getBadge(100,$index)}}" ng-show="result.getBadge(100,$index)" ng-mouseover="hint = 1" ng-mouseout = "hint = 0">
                 <img class="bordered img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
                 <img class="bordered img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
                 <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)||'../img/No_Mastery.png'}}">
@@ -34,7 +35,8 @@
             <div class="flow-summoner" ng-click="result.goSummoner(200, $index)">
                 <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
                 <p class="nickname">{{summoner.summonerName}}</p>
-                <img class="grade-badge" ng-src="{{result.getBadge(200,$index)}}" ng-show="result.getBadge(200,$index)">
+                <p class="badge-hint" ng-show="hint">{{result.getHint(200, $index)}}</p>
+                <img class="grade-badge" ng-src="{{result.getBadge(200,$index)}}" ng-show="result.getBadge(200,$index)" ng-mouseover="hint = 1" ng-mouseout = "hint = 0">
                 <img class="bordered img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
                 <img class="bordered img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
                 <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)||'../img/No_Mastery.png'}}">

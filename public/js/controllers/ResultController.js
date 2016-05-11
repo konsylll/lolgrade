@@ -1,5 +1,8 @@
 angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, ApiService, ChampionService, CachingService, BadgeService, $state, SpellService, $timeout){
 
+    $('.grade-badge').mouseover()
+
+
     $scope.wait = false;
     //Summoner Spells parser
     this.getSpellUrl = function(id){
@@ -22,6 +25,16 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
         return result;
     }
 
+    this.getHint = function(team, index){
+        var result = "";
+        if (team == 100){
+            result = allGrades[index].hint;
+        } else if (team == 200){
+            result = allGrades[index+team100.length].hint;
+        }
+        return result;
+    }
+
     //Get ID - Name dependencies
     ChampionService.getChamps($scope);
 
@@ -39,6 +52,7 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
 
     //Taking all info about requester
     $scope.requester = ApiService.getRequester(team100, team200);
+    console.log($scope.requester);
 
     //For 3 vs 3
     $scope.is3 = ApiService.is3vs3(team100, team200);

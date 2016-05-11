@@ -4,6 +4,7 @@
   object-fit: cover;
   border-color: $seacolor-dark;
   border-style: solid;
+  z-index: 200;
   @if $width > 100 {
     border-width: 2px;
   } @else {
@@ -22,6 +23,7 @@
   background-color: $seacolor-dark;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
+  z-index: 200;
 }
 
 @mixin create-grade($width){
@@ -156,12 +158,28 @@
 
 @mixin create-grade-badge($width, $mobile:""){
   position: absolute;
-  top: $width/7+px;
+  top: $width/8+px;
   width: $width/4+px;
   left: (15 + $width - $width/4 - $width/20)+px;
   @if $mobile !="" {
     left: ($mobile + $width - $width/4 - $width/20)+px;
   }
+}
+
+@mixin create-badge-hint($width){
+  position: absolute;
+  background-color: white;
+  padding: $width/40+px;
+  width: $width+px;
+  top: 0;
+  left: ($width+15)+px;
+  border-radius: 8px;
+  border: 2px $seacolor-dark solid;
+  font-weight: 300;
+  font-family: $main-font;
+  font-size: 18px;
+  vertical-align: middle;
+  z-index: 400;
 }
 
 @mixin combine-image-name-grade($width, $mobile:""){
@@ -210,6 +228,9 @@
   }
   .grade-badge {
     @include create-grade-badge($width, $mobile);
+  }
+  .badge-hint {
+    @include create-badge-hint($width);
   }
 
   @if $mobile !="" {

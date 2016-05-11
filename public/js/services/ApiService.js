@@ -43,10 +43,10 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
         var nickname = $('#nickname')[0].value;
 
         var requester = arr1.filter(function(player){
-            return player.summonerName == nickname;
+            return player.summonerName.toLowerCase() == nickname.toLowerCase();
         }).concat(
             arr2.filter(function(player){
-                    return player.summonerName == nickname;
+                    return player.summonerName.toLowerCase() == nickname.toLowerCase();
             })
         );
 
