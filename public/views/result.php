@@ -1,9 +1,9 @@
 <div class = "bg-result">
     <div class="row">
-        <div class="col-md-1 col-sm-1 col-xs-1 marged">
+        <div class="col-md-1 col-sm-1 col-xs-2 marged">
             <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{requester.profileIconId}}.png" class="summoner-icon">
         </div>
-        <div class="col-md-9 col-sm-9 col-xs-9 marged">
+        <div class="col-md-9 col-sm-9 col-xs-8 marged">
             <p class="requester-text">{{requester.summonerName}}</p>
             <p class="requester-description"> {{gameMode}} Game Type, {{server}}</p>
         </div>
