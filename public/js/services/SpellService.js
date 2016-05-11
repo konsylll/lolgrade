@@ -40,13 +40,20 @@ angular.module('lolgrade').service('SpellService', function () {
 	this.getTopMastery = function(masteryArr){
 		var urlTemplate = "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/mastery/";
 		var masteryString = "";
+		var found = 0;
 		for(var i = 0; i < masteryArr.length; i++){
 			masteryString = "" + masteryArr[i].masteryId;
 			if(masteryString.search(/6161|6162|6164|6361|6362|6363|6261|6262|6263/) == 0){
 				urlTemplate = urlTemplate + masteryArr[i].masteryId + ".png";
+				found = 1;
 				break;
 			}
 		}
+
+		if(!found){
+			urlTemplate = null;
+		}
+
 		return urlTemplate;
 	}
 

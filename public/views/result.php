@@ -16,7 +16,7 @@
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <img class="bordered img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
                 <img class="bordered img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
-                <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)}}">
+                <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)||'../img/No_Mastery.png'}}">
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
                 <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
@@ -35,7 +35,7 @@
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <img class="bordered img-spell1 img-circle" ng-src="{{result.getSpellUrl(summoner.spell1Id)}}">
                 <img class="bordered img-spell2 img-circle" ng-src="{{result.getSpellUrl(summoner.spell2Id)}}">
-                <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)}}">
+                <img class="bordered img-mastery img-circle" ng-src="{{result.getTopMastery(summoner.masteries)||'../img/No_Mastery.png'}}">
                 <p class="grade {{summoner.highestGrade}}">{{summoner.highestGrade}}</p>
                 <div class="shadowed"></div>
                 <p class="pts {{summoner.ranked[0].tier}}">{{summoner.ranked[0].entries[0].leaguePoints}}</p>
