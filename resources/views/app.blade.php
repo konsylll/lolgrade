@@ -27,27 +27,29 @@
                 </div>
 
                 <div class="row text-center" ng-controller = "HeaderCtrl as header">
-                    <div class="col-md-8 resp-width">
-                        <div class="input-group input-nickname">
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button" id="nickname">
-                            <select class="selectpicker select-server" id="server">
-                                <option value="NA">NA</option>
-                                <option value="EUW">EUW</option>
-                                <option value="EUNE">EUNE</option>
-                                <option value="BR">BR</option>
-                                <option value="TR">TR</option>
-                                <option value="RU">RU</option>
-                                <option value="LAN">LAN</option>
-                                <option value="LAS">LAS</option>
-                                <option value="OCE">OCE</option>
-                                <option value="KR">KR</option>
-                                <option value="JP">JP</option>
-                            </select>
+                    <form>
+                        <div class="col-md-8 resp-width">
+                            <div class="input-group input-nickname">
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button" id="nickname">
+                                <select class="selectpicker select-server" id="server">
+                                    <option value="NA">NA</option>
+                                    <option value="EUW">EUW</option>
+                                    <option value="EUNE">EUNE</option>
+                                    <option value="BR">BR</option>
+                                    <option value="TR">TR</option>
+                                    <option value="RU">RU</option>
+                                    <option value="LAN">LAN</option>
+                                    <option value="LAS">LAS</option>
+                                    <option value="OCE">OCE</option>
+                                    <option value="KR">KR</option>
+                                    <option value="JP">JP</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10">
-                        <button class="btn btn-primary srch-light btn-block" ng-click="header.getData()" id="srch" ng-disabled="isDisabled"><b>Search</b></button>
-                    </div>
+                        <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10">
+                            <button class="btn btn-primary srch-light btn-block" ng-click="header.getData()" id="srch" ng-disabled="isDisabled"><b>Search</b></button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-2 col-sm-2 col-xs-0"></div>
