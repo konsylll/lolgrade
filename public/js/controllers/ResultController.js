@@ -52,7 +52,6 @@ angular.module('lolgrade').controller('ResultCtrl', function($scope, $location, 
 
     //Taking all info about requester
     $scope.requester = ApiService.getRequester(team100, team200);
-    console.log($scope.requester);
 
     //For 3 vs 3
     $scope.is3 = ApiService.is3vs3(team100, team200);

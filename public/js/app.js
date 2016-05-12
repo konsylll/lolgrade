@@ -5,9 +5,12 @@ angular.module('lolgrade', [
     'ngResource',
     'ngRoute',
     'ui.router'
-]).config(function ($stateProvider) {
+]).config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('main', {
         url:"",
+        templateUrl: "views/main.php"
+    }).state('/main', {
+        url:"/",
         templateUrl: "views/main.php"
     }).state('result', {
         url:"/result",
@@ -44,8 +47,14 @@ angular.module('lolgrade', [
             'summoner': null,
             'redirected': 0,
             'gameMode': null
+        },
+        onEnter: function($state, $stateParams){
+            if(!$stateParams.redirected) {
+                $state.go("main");
+            }
         }
-    })
+    });
+    $urlRouterProvider.otherwise('/');
 }).directive('summonerInfo', function(){
     return {
         restrict: "E",

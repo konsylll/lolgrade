@@ -16,9 +16,10 @@ class ApiService
 {
     public static $AMOUNT_OF_RETRIEVES = 200;
     public static $NO_GRADE = 'NG';
-    private static $API_KEY = '42700bb9-9470-4454-89c5-7757f4ec1f50';
+    private static $API_KEY;
     public function __construct()
     {
+        ApiService::$API_KEY = env('LOL_API_KEY');
         $this->guzzle = new Client('');
     }
 

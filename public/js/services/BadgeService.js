@@ -13,8 +13,6 @@ angular.module('lolgrade').service('BadgeService', function () {
 				} 
 			});
 
-			console.log(sumRes);
-
 			if (sumRes > 20){
 				badge = template + "Badge_yellow.png";
 				hint = "This summoner has played more than 20 champions on S- or higher";

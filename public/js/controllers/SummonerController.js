@@ -1,7 +1,5 @@
 angular.module('lolgrade').controller('SummCtrl', function($scope, ApiService, ChampionService, $state){
-    if(!$state.params.redirected) {
-        window.location.replace("/");
-    }
+
     function chunk(arr, cols){
         var newArr = [];
         for(var i=0; i<arr.length; i+=cols){
