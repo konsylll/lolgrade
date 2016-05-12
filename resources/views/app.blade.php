@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
     <link rel="icon" type="image/ico" href="favicon.ico">
     <title>LoLGrade - League of Legends Maximum grades, Ranked stats, etc.</title>
