@@ -22,11 +22,16 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
     }
 
     //Formatting Srting to Heading string
-    this.formatStr = function(str){
-        str = str.toLowerCase();
-        var heading = str[0].toUpperCase();
-        var slicedStr = str.slice(1);
-        return heading+slicedStr;
+    this.formatStr = function(id){
+        var result = "Custom";
+        switch(id){
+            case 410: result = "Ranked Draft 5 vs 5"; break;
+            case 400: result = "Normal Draft 5 vs 5"; break;
+            case 65: result = "ARAM 5 vs 5"; break;
+            case 8: result = "Normal 3 vs 3"; break;
+            case 2: result = "Normal Blind 5 vs 5"; break;
+        }
+        return result;
     }
 
     //Identifying type of the game 3vs3 or not   
@@ -110,12 +115,14 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
             //Go to another view also filtering data and passing to the next view or 404 or overload
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
                 var allGrades = response.data[1];
+                console.log(allGrades);
                 var team100 = makeTeam(response.data[0], 100);
                 var team200 = makeTeam(response.data[0], 200);
                 var team100 = mix(team100, response.data[2]);
                 var team200 = mix(team200, response.data[2]);
 
                 var gameMode = response.data[3];
+                console.log(gameMode);
 
                 //Caching ID
                 CachingService.setCachedId(nickname, response.data[4]);

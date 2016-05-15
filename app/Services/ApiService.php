@@ -40,7 +40,7 @@ class ApiService
     }
 
     private function getRankedQuery($participants, $server){
-        $query = "https://".$server.".api.pvp.net/api/lol/".$server.    "/v2.5/league/by-summoner/";
+        $query = "https://".$server.".api.pvp.net/api/lol/".$server."/v2.5/league/by-summoner/";
         foreach ($participants as $participant){
             $query = $query.$participant['summonerId'].",";
         }
@@ -79,7 +79,13 @@ class ApiService
     }
     
     public function insertMaxGrades($people, $server, $serverID){
-        $gameMode = $people['gameMode'];
+        
+        if(isset($people['gameQueueConfigId'])){
+            $gameMode = $people['gameQueueConfigId'];
+        } else {
+            $gameMode = 0;
+        }
+
         $people = $people['participants'];
         $allGrades = [];
         $count = 0;//TODO remove after MTP This is a pause needed for dev api key (48, 58-62)
