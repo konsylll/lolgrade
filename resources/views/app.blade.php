@@ -3,9 +3,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="UTF-8">
+    <meta name="description" content="Find live league of legends games with granted champions mastery, maximum grades. Get all champions S grade rank!">
+    <meta name="keywords" content="lol, league of legends, lol grade, lolgrade, lol grades, grades, champion mastery, live games, achievements, find ranked games, champion grades, stats,">
+    <meta property="og:site_name" content="LoLGrade">
+    <meta property="og:url" content="http://lolgrade.com">
+    <meta property="og:title" content="LoLGrade - League of Legends Live Games, Champion mastery, Maximum grades, Ranked stats, etc.">
+    <meta property="og:image" content="http://lolgrade.com/img/cover.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Find live league of legends games with granted champions mastery, maximum grades. Get all champions S grade rank!">
+
     <link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
     <link rel="icon" type="image/ico" href="favicon.ico">
-    <title>LoLGrade - League of Legends Maximum grades, Ranked stats, etc.</title>
+    <title>LoLGrade - League of Legends Live Games, Champion mastery, Maximum grades, Ranked stats, etc.</title>
 </head>
 <body ng-app="lolgrade">
 <div class="wrap">
