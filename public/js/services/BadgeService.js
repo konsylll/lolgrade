@@ -13,29 +13,29 @@ angular.module('lolgrade').service('BadgeService', function () {
 				} 
 			});
 
-			if (sumRes > 20){
+			if (sumRes >= 20){
 				badge = template + "Badge_yellow.png";
-				hint = "This summoner has played more than 20 champions on S- or higher";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. Good Job!";
 			} 
-			if (sumRes > 30){
+			if (sumRes >= 30){
 				badge = template + "Badge_cyan.png";
-				hint = "This summoner has played more than 30 champions on S- or higher. Good Job!";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. Nice Work Done!";
 			} 
-			if (sumRes > 40){
+			if (sumRes >= 40){
 				badge = template + "Badge_blue.png";
-				hint = "This summoner has played more than 40 champions on S- or higher. Great Job!";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. Great Job!";
 			} 
-			if (sumRes > 50){
+			if (sumRes >= 50){
 				badge = template + "Badge_violet.png";
-				hint = "This summoner has played more than 50 champions on S- or higher. Awesome work!!!";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. Awesome work!!!";
 			}
-			if (sumRes > 60){
+			if (sumRes >= 60){
 				badge = template + "Badge_green.png";
-				hint = "This summoner has played more than 60 champions on S- or higher. Unbelievable!!!";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. Unbelievable!!!";
 			}
-			if (sumRes > 90){
+			if (sumRes >= 90){
 				badge = template + "Badge_black.png";
-				hint = "This summoner has played more than 90 champions on S- or higher. This guy is a MONSTER!!!!";
+				hint = "This summoner has played "+sumRes+" champions on S- or higher. This guy is a MONSTER!!!!";
 			}
 			if (sumRes/numberOfChampions == 1){
 				badge = template + "Badge_red.png";
