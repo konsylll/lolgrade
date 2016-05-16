@@ -1,4 +1,4 @@
-<div class = "bg-result">
+<div class = "bg-result" ng-hide="wait">
     <div class="row">
         <div class="col-md-1 col-sm-1 col-xs-2 marged">
             <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/{{requester.profileIconId}}.png" class="summoner-icon">
@@ -12,7 +12,7 @@
         <div class="col-md-2 col-sm-2 col-xs-2" ng-show="is3"></div>
         <div class="col-md-2 col-sm-2 col-xs-2 compressed" ng-repeat="summoner in summonersTeam100">
             <div class="flow-summoner" ng-click="result.goSummoner(100, $index)">
-                <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
+                <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg" imgonload>
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="badge-hint" ng-show="hint">{{result.getHint(100, $index)}}</p>
                 <img class="grade-badge" ng-src="{{result.getBadge(100,$index)}}" ng-show="result.getBadge(100,$index)" ng-mouseover="hint = 1" ng-mouseout = "hint = 0">
@@ -33,7 +33,7 @@
         <div class="col-md-2 col-sm-2 col-xs-2" ng-show="is3"></div>
         <div class="col-md-2 col-sm-2 col-xs-2 compressed" ng-repeat="summoner in summonersTeam200">
             <div class="flow-summoner" ng-click="result.goSummoner(200, $index)">
-                <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg">
+                <img class="img-summoner" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champions[summoner.championId]}}_0.jpg" imgonload>
                 <p class="nickname">{{summoner.summonerName}}</p>
                 <p class="badge-hint" ng-show="hint">{{result.getHint(200, $index)}}</p>
                 <img class="grade-badge" ng-src="{{result.getBadge(200,$index)}}" ng-show="result.getBadge(200,$index)" ng-mouseover="hint = 1" ng-mouseout = "hint = 0">

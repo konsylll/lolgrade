@@ -60,4 +60,17 @@ angular.module('lolgrade', [
         restrict: "E",
         templateUrl: 'templates/summoner.info.php'
     }
+}).directive('imgonload', function(){
+    return {
+        restrict: "A",
+
+        link: function(scope, element){
+            element.on('load', function(){
+                scope.wait = false;
+            });
+            scope.$watch('ngSrc', function(){
+                scope.wait = true;
+            });
+        }
+    }
 });

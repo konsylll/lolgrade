@@ -115,14 +115,12 @@ angular.module('lolgrade').service('ApiService', function ($http, $state, Cachin
             //Go to another view also filtering data and passing to the next view or 404 or overload
             if (Object.prototype.toString.call(response.data) == '[object Array]') {
                 var allGrades = response.data[1];
-                console.log(allGrades);
                 var team100 = makeTeam(response.data[0], 100);
                 var team200 = makeTeam(response.data[0], 200);
                 var team100 = mix(team100, response.data[2]);
                 var team200 = mix(team200, response.data[2]);
 
                 var gameMode = response.data[3];
-                console.log(gameMode);
 
                 //Caching ID
                 CachingService.setCachedId(nickname, response.data[4]);
